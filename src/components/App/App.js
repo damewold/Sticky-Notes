@@ -1,30 +1,35 @@
 import React, { Component } from 'react';
 import './App.css';
-import axios from 'react'
+import axios from 'axios'
 
 class App extends Component {
 
 constructor(){
   super()
   this.state = {
-    galleryList:[],
-    galleryItem:{
-      path:'path',
-     description:'description',
-     like:'likes'
+    taskList:[],
+    taskItem:{
+      id:'',
+      task:'',
+     dueDate:'',
+     status:''
     }
   }
 }
 
 componentDidMount(){
-  this.getGalleryItem();
+  this.getTaskItem();
 }
 
-getGalleryItem = () => {
-  axios.get('/gallery')
+
+getTaskItem = (event) => {
+  // event.preventDefault();
+  console.log('in getTaskItem')
+  axios.get('/tasks')
     .then( response => {
+console.log(response.data)
       this.setState({
-        galleryList: response.data
+        taskList: response.data
       })
     })
     .catch( error => {
@@ -44,17 +49,13 @@ getGalleryItem = () => {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Gallery of my life</h1>
+          <h1 className="App-title">To Do App</h1>
         </header>
-        <br/>
-        <p>Gallery</p>
-       
-        <ul>
-{this.state.galleryList.map(song =>
-<li >
-{galleryList.id}</li>)}
-</ul> 
-        
+         <table>
+        <thead> <th>id</th> <th>Task</th> <th>due Date</th> <th>Status</th></thead>
+         <tbody>  {this.state.taskList.map(task=><tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{task.dueDate}</td><td>{task.status}</td></tr>)}</tbody>
+  
+         </table>
       </div>
     );
   }

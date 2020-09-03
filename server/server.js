@@ -8,11 +8,11 @@ app.use(bodyParser.json()); // needed for axios requests
 app.use(express.static('build'));
 
 
-/**------Route used------------ */
-// const routeExample = require('.');
+/**------Express routes------------ */
+const router = require('./routes/taskRouter');
 
-/** ---------- EXPRESS ROUTES ---------- **/
-// app.use('/routExample', routeExample);
+/** ---------- Set up the Routs ---------- **/
+app.use('/tasks', router);
 
 /** ---------- START SERVER ---------- **/
 app.listen(PORT,  () => {
