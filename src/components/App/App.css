@@ -17,24 +17,38 @@ table{
   margin: 0 auto;
   display: table;
   margin-top: 5%;
-border:none;
 border-collapse: collapse;
-border-spacing: 0.5rem;
+
 }
 
 table td {
-  border: 1px solid #000;
+padding:20px;
+margin-left:10px;
+text-align: left;
 
 }
 
-table td:first-child {
-  border-left: none;
+
+
+td:nth-child(even){
+  background-color: azure
 }
 
-table td:last-child {
-  border-right: none;
+td:nth-child(odd){
+  background-color:lightcyan;
 }
 
+th:nth-child(even){
+  background-color: azure
+}
+
+th:nth-child(odd){
+  background-color:lightcyan;
+}
+
+td:nth-child(2){
+  width: 70%;
+  }
 
 .App-intro {
   font-size: large;
