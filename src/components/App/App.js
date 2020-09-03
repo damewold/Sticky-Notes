@@ -53,6 +53,9 @@ console.log(response.data)
         <header className="App-header">
           <h1 className="App-title">To Do App</h1>
         </header>
+        <label>Task:</label><input id='task' type="text" placeholder="Write the task to be done"/>
+        <label>Due Date:</label><input id='dueDate' type='date'/>
+        <button>Add Task</button>
          <table>
         <thead><tr><th>id</th><th>Task</th><th>due Date</th><th>Status</th></tr></thead>
          <tbody>{this.state.taskList.map(task=><tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td><td>{task.status}</td><td><button>Delete</button></td></tr>)}</tbody>

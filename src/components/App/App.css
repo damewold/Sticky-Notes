@@ -7,10 +7,13 @@
   height: 70px;
   padding: 20px;
   color: white;
+  width:cover;
+
 }
 
 .App-title {
   font-size: 1.5em;
+  width: 100%;
 }
 
 table{ 
@@ -46,9 +49,28 @@ th:nth-child(odd){
   background-color:lightcyan;
 }
 
-td:nth-child(2){
-  width: 70%;
+td:nth-child(1){
+  width: 3%;
   }
+td:nth-child(2){
+  width: 60%;
+  }
+
+  td:nth-child(3){
+    width: 12%;
+    }
+
+    td:nth-child(4){
+      width: 15%;
+      }
+
+      td:nth-child(5){
+        width: 10%;
+        }
+
+        #task{
+
+        }
 
 .App-intro {
   font-size: large;
