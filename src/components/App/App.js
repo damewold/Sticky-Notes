@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
+import moment from 'moment';
+
 
 class App extends Component {
 
@@ -52,9 +54,8 @@ console.log(response.data)
           <h1 className="App-title">To Do App</h1>
         </header>
          <table>
-        <thead> <th>id</th> <th>Task</th> <th>due Date</th> <th>Status</th></thead>
-         <tbody>  {this.state.taskList.map(task=><tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{task.dueDate}</td><td>{task.status}</td></tr>)}</tbody>
-  
+        <thead><tr><th>id</th><th>Task</th><th>due Date</th><th>Status</th></tr></thead>
+         <tbody>{this.state.taskList.map(task=><tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td><td>{task.status}</td></tr>)}</tbody>
          </table>
       </div>
     );

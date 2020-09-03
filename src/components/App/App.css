@@ -13,6 +13,29 @@
   font-size: 1.5em;
 }
 
+table{ 
+  margin: 0 auto;
+  display: table;
+  margin-top: 5%;
+border:none;
+border-collapse: collapse;
+border-spacing: 0.5rem;
+}
+
+table td {
+  border: 1px solid #000;
+
+}
+
+table td:first-child {
+  border-left: none;
+}
+
+table td:last-child {
+  border-right: none;
+}
+
+
 .App-intro {
   font-size: large;
 }
