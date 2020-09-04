@@ -49,7 +49,7 @@ addTaskItem = (event) => {
   axios.post('/tasks',{
     task: this.state.task, 
     dueDate:this.state.dueDate, 
-    status: this.state.status
+    status:'Task Not Completed'
    })
 }
 
@@ -77,12 +77,7 @@ addTaskItem = (event) => {
                                                        value={this.state.dueDate}
                                                        onChange={this.handleInputChangeFor("dueDate")}
                                                        />
-        <label>Status:</label><input 
-                                                       id='status' 
-                                                       type='text'
-                                                       value={this.state.status}
-                                                       onChange={this.handleInputChangeFor("status")}
-                                                       />
+   
         <button onClick={this.addTaskItem}>Add Task</button>
          <table>
         <thead><tr><th>id</th><th>Task</th><th>due Date</th><th>Status</th></tr></thead>
