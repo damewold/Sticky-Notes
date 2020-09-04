@@ -46,18 +46,11 @@ handleInputChangeFor = propertyName => (event) =>{
 
 addTaskItem = (event) => {
   event.preventDefault();
-  console.log('in addTaskItem')
-//   axios.post('/tasks')
-//     .then( response => {
-// console.log(response.data)
-//       this.setState({
-//         taskList: response.data
-//       })
-//     })
-//     .catch( error => {
-//       alert(`Couldn't get inventory. Try again later`);
-//       console.log('Error ', error);
-//     })
+  axios.post('/tasks',{
+    task: this.state.task, 
+    dueDate:this.state.dueDate, 
+    status: this.state.status
+   })
 }
 
 
@@ -76,8 +69,20 @@ addTaskItem = (event) => {
                                               placeholder="Write the task to be done"   
                                               value={this.state.task}
                                               onChange={this.handleInputChangeFor("task")}
-                  onChange={this.handleInputChangeFor("title")}/>
-        <label>Due Date:</label><input id='dueDate' type='date'/>
+                                              />
+
+        <label>Due Date:</label><input 
+                                                       id='dueDate' 
+                                                       type='date'
+                                                       value={this.state.dueDate}
+                                                       onChange={this.handleInputChangeFor("dueDate")}
+                                                       />
+        <label>Status:</label><input 
+                                                       id='status' 
+                                                       type='text'
+                                                       value={this.state.status}
+                                                       onChange={this.handleInputChangeFor("status")}
+                                                       />
         <button onClick={this.addTaskItem}>Add Task</button>
          <table>
         <thead><tr><th>id</th><th>Task</th><th>due Date</th><th>Status</th></tr></thead>

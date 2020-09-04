@@ -15,25 +15,12 @@ router.get('/', (req, res) => {
     });
 });
 
-// // There are other ways you might do this... 
-// // BUT to illustrate a req.params that isn't an id...
-// router.get('/artist/:artist', (req, res) => {
-//     const artistToGet = req.params.artist;
-//     const sqlText = `SELECT * FROM songs WHERE artist=$1`;
-//     pool.query(sqlText, [artistToGet])
-//         .then((result) => {
-//             console.log(`Songs for artist ${artistToGet}`, result.rows);
-//             res.send(result.rows);
-//         })
-//         .catch((error) => {
-//             console.log(`Error making database query ${sqlText}`, error);
-//             res.sendStatus(500); // Good server always responds
-//         })
-// })
+
 
 // // Setup a POST route to add a new song to the database
-// router.post('/', (req, res) => {
-//     const newSong = req.body;
+router.post('/', (req, res) => {
+    const newSong = req.body;
+    console.log(req.body)
 //     const sqlText = `INSERT INTO songs (rank, artist, track, published) VALUES 
 //   ($1, $2, $3, $4)`;
 //     // Let sql sanitize your inputs (NO Bobby Drop Tables here!)
@@ -47,7 +34,7 @@ router.get('/', (req, res) => {
 //             console.log(`Error making database query ${sqlText}`, error);
 //             res.sendStatus(500); // Good server always responds
 //         })
-// })
+})
 
 // // Setup DELETE to remove a song from the database
 // // We are using a request parameter (req.params) to identify
