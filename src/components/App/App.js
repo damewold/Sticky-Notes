@@ -56,8 +56,10 @@ addTaskItem = (event) => {
 
 deleteTaskItem = (event)=>{
   event.preventDefault();
-  // axios.delete()
+ let id = event.target.value
+  axios.delete(`/tasks/${id}`)
   console.log(event.target.value)
+  this.getTaskItem();
 }
 
 

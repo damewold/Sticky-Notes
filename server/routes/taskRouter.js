@@ -39,20 +39,20 @@ router.post('/', (req, res) => {
 // // We are using a request parameter (req.params) to identify
 // // the song we want to delete. We expect this will be an id 
 // // from the database
-// router.delete('/:id', (req, res) => {
-//     let reqId = req.params.id;
-//     console.log('Delete request for id', reqId);
-//     let sqlText = 'DELETE FROM songs WHERE id=$1;';
-//     pool.query(sqlText, [reqId])
-//         .then((result) => {
-//             console.log('Song deleted');
-//             res.sendStatus(200);
-//         })
-//         .catch((error) => {
-//             console.log(`Error making database query ${sqlText}`, error);
-//             res.sendStatus(500); // Good server always responds
-//         })
-// })
+router.delete('/:id', (req, res) => {
+    let reqId = req.params.id;
+    console.log('Delete request for id', reqId);
+    let sqlText = 'DELETE FROM "tasksTable" WHERE "id" = $1';
+    pool.query(sqlText, [reqId])
+        .then((result) => {
+            console.log('Song deleted');
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${sqlText}`, error);
+            res.sendStatus(500); // Good server always responds
+        })
+})
 
 // // Change rank on my song - body will say up or down
 // router.put('/rank/:id', (req, res) => {
