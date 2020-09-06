@@ -51,6 +51,7 @@ addTaskItem = (event) => {
     dueDate:this.state.dueDate, 
     status:'Task Not Completed'
    })
+ this.getTaskItem()
 }
 
 
