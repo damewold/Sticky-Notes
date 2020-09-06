@@ -62,6 +62,13 @@ deleteTaskItem = (event)=>{
   this.getTaskItem();
 }
 
+editTaskItem = (event)=>{
+  event.preventDefault();
+//  let id = event.target.value
+//   axios.put(`/tasks/${id}`)
+  console.log(event.target.value)
+  // this.getTaskItem();
+}
 
   
   render() {
@@ -88,7 +95,7 @@ deleteTaskItem = (event)=>{
         <button onClick={this.addTaskItem}>Add Task</button>
          <table>
         <thead><tr><th>id</th><th>Task</th><th>due Date</th><th>Status</th></tr></thead>
-         <tbody>{this.state.taskList.map(task=><tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td><td>{task.status}</td><td><button value={task.id} onClick={this.deleteTaskItem}>Delete</button></td></tr>)}</tbody>
+         <tbody>{this.state.taskList.map(task=><tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td><td value={task.id} onClick={this.editTaskItem}>{task.status}</td><td><button>Edit</button></td><td><button value={task.id} onClick={this.deleteTaskItem}>Delete</button></td></tr>)}</tbody>
          </table>
       </div>
     );

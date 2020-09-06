@@ -45,11 +45,11 @@ router.delete('/:id', (req, res) => {
     let sqlText = 'DELETE FROM "tasksTable" WHERE "id" = $1';
     pool.query(sqlText, [reqId])
         .then((result) => {
-            console.log('Song deleted');
+            console.log('Task deleted');
             res.sendStatus(200);
         })
         .catch((error) => {
-            console.log(`Error making database query ${sqlText}`, error);
+            console.log(`Error in deleting the task`, error);
             res.sendStatus(500); // Good server always responds
         })
 })
