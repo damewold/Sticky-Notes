@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const taskItem = req.body;
     console.log(req.body)
-    const sqlText = `INSERT INTO "tasksTable" ("status","task","dueDate") VALUES('$1', '$2','$3');`;
+    const sqlText = `INSERT INTO "tasksTable" ("status","task","dueDate") VALUES($1, $2,$3);`;
     // Let sql sanitize your inputs (NO Bobby Drop Tables here!)
     // the $1, $2, etc get substituted with the values from the array below
     pool.query(sqlText, [taskItem.status, taskItem.task, taskItem.dueDate])
