@@ -13,12 +13,16 @@ constructor(){
       id:'',
       task:'',
      dueDate:'',
-     status:''
+     status:'',
+     showStatus:false
   }
 }
 
 componentDidMount(){
   this.getTaskItem();
+  this.setState({
+    status: this.state.status
+})
 }
 
 
@@ -70,8 +74,30 @@ editTaskItem = (event)=>{
   // this.getTaskItem();
 }
 
+showStatus = () =>{
+  this.setState({
+      showStatus: !this.state.showStatus
+  })
+}
   
   render() {
+
+  let itemToRender;
+   if(this.state.showStatus){
+     itemToRender = <tbody>{this.state.taskList.map(task=><tr key={task.id}>
+       <td>{task.id}</td>
+       <td>{task.task}</td>
+       <td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td>
+       <td><input type="text" name='status'
+                            value={task.status}
+                            onChange={(event) => {this.handleInputChangeFor(event,'status')}}
+       /></td>
+   </tr>)}</tbody>
+   }else{
+     itemToRender = 
+       <tbody>{this.state.taskList.map(task=><tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td><td value={task.id} onClick={this.editTaskItem}>{task.status}</td><td><button value={task.id} onClick={this.deleteTaskItem}>Delete</button></td></tr>)}</tbody>
+     
+   }
     return (
       <div className="App">
         <header className="App-header">
@@ -94,8 +120,8 @@ editTaskItem = (event)=>{
    
         <button onClick={this.addTaskItem}>Add Task</button>
          <table>
-        <thead><tr><th>id</th><th>Task</th><th>due Date</th><th>Status</th></tr></thead>
-         <tbody>{this.state.taskList.map(task=><tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td><td value={task.id} onClick={this.editTaskItem}>{task.status}</td><td><button>Edit</button></td><td><button value={task.id} onClick={this.deleteTaskItem}>Delete</button></td></tr>)}</tbody>
+        <thead><tr><th>id</th><th>Task</th><th>due Date</th><th><button onClick={this.showStatus}>Status</button></th></tr></thead>
+        {itemToRender}
          </table>
       </div>
     );
