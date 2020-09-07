@@ -31,12 +31,13 @@ getTaskItem = (event) => {
       const iStatus =[]
       const arr = [...new Set(response.data)]
         arr.forEach(item => iStatus.push(item.status))
-console.log('this is a new array', arr)
-console.log('this each tasks status', iStatus)
-iStatus.map(item=>console.log(item))
+// console.log('this is a new array', ...arr)
+// console.log('this is each tasks status', Object.values(iStatus))
+const itemStatus = iStatus.map(item => item)
+
       this.setState({
         taskList: response.data,
-        status: '',
+        status: itemStatus.forEach(item=>item),
       })
     })
     .catch( error => {
