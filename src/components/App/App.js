@@ -20,9 +20,6 @@ constructor(){
 
 componentDidMount(){
   this.getTaskItem();
-  this.setState({
-    status: this.state.status
-})
 }
 
 
@@ -31,9 +28,15 @@ getTaskItem = (event) => {
   console.log('in getTaskItem')
   axios.get('/tasks')
     .then( response => {
-console.log(response.data)
+      const iStatus =[]
+      const arr = [...new Set(response.data)]
+        arr.forEach(item => iStatus.push(item.status))
+console.log('this is a new array', arr)
+console.log('this each tasks status', iStatus)
+iStatus.map(item=>console.log(item))
       this.setState({
-        taskList: response.data
+        taskList: response.data,
+        status: '',
       })
     })
     .catch( error => {
@@ -89,7 +92,7 @@ showStatus = () =>{
        <td>{task.task}</td>
        <td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td>
        <td><input type="text" name='status'
-                            value={task.status}
+                            value={this.state.status}
                             onChange={(event) => {this.handleInputChangeFor(event,'status')}}
        /></td>
    </tr>)}</tbody>
