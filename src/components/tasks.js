@@ -55,22 +55,22 @@ class Tasks extends Component {
         })
       } 
       
-      addTaskItem = (event) => {
-        event.preventDefault();
-        axios.post('/tasks',{
-          task: this.state.task, 
-          dueDate:this.state.dueDate, 
-          status:'Task Not Completed'
-         })
-       this.getTaskItem()
-      }
+      // addTaskItem = (event) => {
+      //   event.preventDefault();
+      //   axios.post('/tasks',{
+      //     task: this.state.task, 
+      //     dueDate:this.state.dueDate, 
+      //     status:'Task Not Completed'
+      //    })
+      //  this.props.getTaskItem()
+      // }
       
       deleteTaskItem = (event)=>{
         event.preventDefault();
-       let id = event.target.value
+       let id = this.props.task.id
         axios.delete(`/tasks/${id}`)
         console.log(event.target.value)
-        this.getTaskItem();
+        this.props.getTaskItem()
       }
       
       editTaskItem = (event)=>{
@@ -115,17 +115,15 @@ class Tasks extends Component {
              />
          </Form>
          }else{
-           itemToRender = 
-           <Form>
-             <label>ID:</label><p>{task.id}</p>
-                               <label>Task:</label><p>{task.task}</p>
-                               <label>Due Date:</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
-                               <label>Status:</label><p>{task.status}</p>
-                               <button value={task.id} onClick={this.deleteTaskItem}>Delete</button>
-                               <button value={task.id} onClick={this.deleteTaskItem}>Edit</button>
-           </Form>
-           
-           
+           itemToRender =
+          <Form key={task.id}>
+           <label>ID:</label><p>{task.id}</p>
+                             <label>Task:</label><p>{task.task}</p>
+                             <label>Due Date:</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
+                             <label>Status:</label><p>{task.status}</p>
+                             <button value={task.id} onClick={this.deleteTaskItem}>Delete</button>
+                             <button value={task.id} onClick={this.deleteTaskItem}>Edit</button>
+         </Form>
          }
           return (
           <div>

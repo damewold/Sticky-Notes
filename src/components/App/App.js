@@ -10,14 +10,18 @@ import Input from 'muicss/lib/react/input';
 
 class App extends Component {
   //create state
-        state = {
-          taskList:[],
-            id:'',
-            task:'',
-           dueDate:'',
-           status:'',
-           showStatus:false
-        }
+  constructor() {
+    super();
+    this.state = {
+      taskList:[],
+        id:'',
+        task:'',
+       dueDate:'',
+       status:'',
+       showStatus:false
+    }
+  }
+     
   
   
     componentDidMount(){
@@ -37,14 +41,13 @@ class App extends Component {
       }
 
 
-        getTaskItem = (event) => {
-        // event.preventDefault();
-        console.log('in getTaskItem')
+        getTaskItem = () => {
+          console.log('I am in getTaskItem')
         axios.get('/tasks')
           .then( response => {
+            console.log('I was Clicked several times')
             this.setState({
-              taskList: response.data,
-              status: '',
+              taskList: response.data
             })
           })
           .catch( error => {
@@ -60,6 +63,7 @@ class App extends Component {
           status:'Task Not Completed'
          })
        this.getTaskItem()
+
       }
 
        
@@ -69,7 +73,7 @@ class App extends Component {
               <header className="App-header">
                 <h1 className="App-title">To Do App</h1>
               </header>
-              <Form onSubmit={this.addTaskItem}>  <label>Task:</label><Input 
+              <Form >  <label>Task:</label><Input 
                                                     id='task' 
                                                     type="text" 
                                                     placeholder="Write the task to be done"   
@@ -84,11 +88,11 @@ class App extends Component {
                                                              onChange={this.handleInputChangeFor("dueDate")}
                                                              />
          
-              <button>Add Task</button></Form>
+              <button onClick={this.addTaskItem}>Add Task</button></Form>
             
-            
-           {this.state.taskList.map(task =><Panel><Tasks  key={task.id} task={task}/></Panel>)}
-              
+              <div className='stickyNotes-Container'>
+           {this.state.taskList.map(task =><Panel key={task.id}><Tasks  getTaskItem={this.getTaskItem} task={task}/></Panel>)}
+           </div>
             </div>
           
                 

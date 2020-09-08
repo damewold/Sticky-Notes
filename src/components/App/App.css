@@ -16,7 +16,12 @@
   width: 100%;
 }
 
-
+.stickyNotes-Container{
+  display: grid;
+  position: relative;
+  grid-template-columns: auto auto auto;
+  grid-gap: 45px;
+}
 
 .App-intro {
   font-size: large;
