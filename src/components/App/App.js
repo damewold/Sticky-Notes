@@ -6,6 +6,7 @@ import Panel from 'muicss/lib/react/panel';
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
 import Textarea from 'muicss/lib/react/textarea';
+import Button from 'muicss/lib/react/button';
 // import moment from 'moment';
 
 
@@ -81,7 +82,7 @@ class App extends Component {
                                                              onChange={this.handleInputChangeFor("dueDate")}
                                                              />
          
-              <button onClick={this.addTaskItem}>Add Task</button></Form>
+              <Button onClick={this.addTaskItem}>Add Task</Button></Form>
             
               <div className='stickyNotes-Container'>
            {this.state.taskList.map(task =><Panel key={task.id}><Tasks  getTaskItem={this.getTaskItem} task={task}/></Panel>)}

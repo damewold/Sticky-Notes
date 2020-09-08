@@ -4,6 +4,7 @@ import moment from 'moment';
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
 import Textarea from 'muicss/lib/react/textarea';
+import Button from 'muicss/lib/react/button';
 import '../components/App/App.css';
 
 
@@ -84,6 +85,8 @@ class Tasks extends Component {
                     value={this.state.status}
                     onChange={(event) => {this.handleInputChange(event,'status')}}
              />
+                       <Button  onClick={this.showStatus}>Back</Button>
+                               <Button >submit</Button>
          </Form>
          }else{
            itemToRender =
