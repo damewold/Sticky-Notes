@@ -16,67 +16,10 @@
   width: 100%;
 }
 
-table{ 
-  margin: 0 auto;
-  display: table;
-  margin-top: 5%;
-border-collapse: collapse;
 
-}
-
-table td {
-padding:20px;
-margin-left:10px;
-text-align: left;
-
-}
-
-
-
-td:nth-child(even){
-  background-color: azure
-}
-
-td:nth-child(odd){
-  background-color:lightcyan;
-}
-
-th:nth-child(even){
-  background-color: azure
-}
-
-th:nth-child(odd){
-  background-color:lightcyan;
-}
-
-td:nth-child(1){
-  width: 3%;
-  }
-td:nth-child(2){
-  width: 60%;
-  }
-
-  td:nth-child(3){
-    width: 12%;
-    }
-
-    td:nth-child(4){
-      width: 15%;
-      }
-
-      td:nth-child(5){
-        width: 10%;
-        }
-
-        #task{
-
-        }
 
 .App-intro {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
+

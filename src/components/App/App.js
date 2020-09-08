@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import '../App/App.css';
+// import './App.css';
 import axios from 'axios'
 import Tasks from '../tasks'
+import Panel from 'muicss/lib/react/panel';
+import Form from 'muicss/lib/react/form';
+import Input from 'muicss/lib/react/input';
 // import moment from 'moment';
 
 
@@ -13,13 +16,27 @@ class App extends Component {
             task:'',
            dueDate:'',
            status:'',
+           showStatus:false
         }
   
-      
+  
     componentDidMount(){
         this.getTaskItem();
       }
   
+
+      handleInputChangeFor = propertyName => (event) =>{
+        this.setState({
+          [propertyName]:event.target.value
+        })
+      } 
+      showStatus = () =>{
+        this.setState({
+            showStatus: !this.state.showStatus
+        })
+      }
+
+
         getTaskItem = (event) => {
         // event.preventDefault();
         console.log('in getTaskItem')
@@ -45,18 +62,14 @@ class App extends Component {
        this.getTaskItem()
       }
 
-          handleInputChangeFor = propertyName => (event) =>{
-                this.setState({
-                  [propertyName]:event.target.value
-                })
-              } 
+       
      render(){
     return(
       <div className="App">
               <header className="App-header">
                 <h1 className="App-title">To Do App</h1>
               </header>
-              <label>Task:</label><input 
+              <Form onSubmit={this.addTaskItem}>  <label>Task:</label><Input 
                                                     id='task' 
                                                     type="text" 
                                                     placeholder="Write the task to be done"   
@@ -64,17 +77,18 @@ class App extends Component {
                                                     onChange={this.handleInputChangeFor("task")}
                                                     />
       
-              <label>Due Date:</label><input 
+              <label>Due Date:</label><Input 
                                                              id='dueDate' 
                                                              type='date'
                                                              value={this.state.dueDate}
                                                              onChange={this.handleInputChangeFor("dueDate")}
                                                              />
          
-              <button onClick={this.addTaskItem}>Add Task</button>
-              <thead><tr><th>id</th><th>Task</th><th>due Date</th><th><button onClick={this.showStatus}>Status</button></th></tr></thead>
-              <div> {this.state.taskList.map(task =>  <Tasks  key={task.id} task={task}/>
-              )} </div>
+              <button>Add Task</button></Form>
+            
+            
+           {this.state.taskList.map(task =><Panel><Tasks  key={task.id} task={task}/></Panel>)}
+              
             </div>
           
                 

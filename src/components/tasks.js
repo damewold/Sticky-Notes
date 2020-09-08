@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import moment from 'moment';
+import '../components/App/App.css';
 
 
 class Tasks extends Component {
@@ -13,7 +14,7 @@ class Tasks extends Component {
             task:'',
            dueDate:'',
            status:'',
-           showStatus:false
+          
         }
       }
       
@@ -77,17 +78,13 @@ class Tasks extends Component {
         // this.getTaskItem();
       }
       
-      showStatus = () =>{
-        this.setState({
-            showStatus: !this.state.showStatus
-        })
-      }
+    
     render() {
 
         let itemToRender;
         const task = this.props.task
          if(this.state.showStatus){
-           itemToRender = <tbody><tr key={task.id}>
+           itemToRender = <tr key={task.id}>
              <td>{task.id}</td>
              <td>{task.task}</td>
              <td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td>
@@ -95,17 +92,16 @@ class Tasks extends Component {
                                   value={this.state.status}
                                   onChange={(event) => {this.handleInputChangeFor(event,'status')}}
              /></td>
-         </tr></tbody>
+         </tr>
          }else{
            itemToRender = 
-             <tbody><tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td><td value={task.id} onClick={this.editTaskItem}>{task.status}</td><td><button value={task.id} onClick={this.deleteTaskItem}>Delete</button></td></tr></tbody>
+             <tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td><td value={task.id} onClick={this.editTaskItem}>{task.status}</td><td><button value={task.id} onClick={this.deleteTaskItem}>Delete</button></td></tr>
            
          }
           return (
           <div>
-               <table>
-              {itemToRender}
-               </table>
+             {itemToRender}
+             
             </div>
           );
         }
