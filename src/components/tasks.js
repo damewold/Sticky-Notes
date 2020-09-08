@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import moment from 'moment';
+import Form from 'muicss/lib/react/form';
+import Input from 'muicss/lib/react/input';
+import Textarea from 'muicss/lib/react/textarea';
 import '../components/App/App.css';
 
 
@@ -84,18 +87,44 @@ class Tasks extends Component {
         let itemToRender;
         const task = this.props.task
          if(this.state.showStatus){
-           itemToRender = <tr key={task.id}>
-             <td>{task.id}</td>
-             <td>{task.task}</td>
-             <td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td>
-             <td><input type="text" name='status'
-                                  value={this.state.status}
-                                  onChange={(event) => {this.handleInputChangeFor(event,'status')}}
-             /></td>
-         </tr>
+           itemToRender = <Form>
+             <label>ID:</label><Input  
+                   type="text"
+                   name="id"
+                   value={this.state.id}
+                   onChange={(event) => {this.handleInputChangeFor(event,'id')}}  
+                   />
+
+             <label>Task:</label><Textarea 
+                  type="text"
+                   name="task"
+                   value={this.state.task}
+                   onChange={(event) => {this.handleInputChangeFor(event,'task')}}
+                   />
+             <label>Due Date:</label><Input 
+                  type="text"
+                   name="dueDate"
+                   value={moment(this.state.dueDate).format('MMM-Do-YYYY')}
+                   onChange={(event) => {this.handleInputChangeFor(event,'dueDate')}}
+                   />
+             <label>Status</label><Input 
+                    type="text" 
+                    name='status'
+                    value={this.state.status}
+                    onChange={(event) => {this.handleInputChangeFor(event,'status')}}
+             />
+         </Form>
          }else{
            itemToRender = 
-             <tr key={task.id}><td>{task.id}</td><td>{task.task}</td><td>{moment(task.dueDate).format('MMM-Do-YYYY')}</td><td value={task.id} onClick={this.editTaskItem}>{task.status}</td><td><button value={task.id} onClick={this.deleteTaskItem}>Delete</button></td></tr>
+           <Form>
+             <label>ID:</label><p>{task.id}</p>
+                               <label>Task:</label><p>{task.task}</p>
+                               <label>Due Date:</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
+                               <label>Status:</label><p>{task.status}</p>
+                               <button value={task.id} onClick={this.deleteTaskItem}>Delete</button>
+                               <button value={task.id} onClick={this.deleteTaskItem}>Edit</button>
+           </Form>
+           
            
          }
           return (
