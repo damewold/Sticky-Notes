@@ -60,15 +60,15 @@ router.put('/', (req, res) => {
     //Update the sticky note
     const id =req.body.id;
    const task=req.body.task;
-   const  dueDate=req.body.dueDate;
+   const dueDate=req.body.dueDate;
    const status=req.body.status
     const queryText = ` UPDATE "tasksTable" SET "id"=$1 ,"status"=$2,"task"=$3,"dueDate"=$4 WHERE "tasksTable"."id"=$1;`;
     pool.query(queryText, [id, status, task, dueDate])
-        .then( (result) => {
+        .then( (res) => {
             res.sendStatus(200);
         })
         .catch( (error) => {
-            console.log(`Error in updating book from the database ${error}`);
+            console.log(`Error in updating  taskTable from the database ${error}`);
             res.sendStatus(500);
         });
 });

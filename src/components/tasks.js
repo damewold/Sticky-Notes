@@ -62,7 +62,7 @@ class Tasks extends Component {
         const task = this.props.task
          if(this.state.showStatus){
            itemToRender = <Form onSubmit={this.editTaskItem}>
-             <label>ID:</label><Input  
+             <label>Task ID:</label><Input  
                    type="text"
                    name="id"
                    value={this.state.id}
@@ -93,7 +93,7 @@ class Tasks extends Component {
          }else{
            itemToRender =
           <Form key={task.id}>
-           <label>ID:</label><p>{task.id}</p>
+                              <label>Task ID:</label><p>{task.id}</p>
                              <label>Task:</label><p>{task.task}</p>
                              <label>Due Date:</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
                              <label>Status:</label><p>{task.status}</p>
