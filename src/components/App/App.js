@@ -55,15 +55,14 @@ class App extends Component {
             console.log('Error ', error);
           })
       }
-        addTaskItem = (event) => {
-        event.preventDefault();
+        addTaskItem = () => {
+        // e.preventDefault();
         axios.post('/tasks',{
           task: this.state.task, 
           dueDate:this.state.dueDate, 
           status:'Task Not Completed'
          })
        this.getTaskItem()
-
       }
 
        

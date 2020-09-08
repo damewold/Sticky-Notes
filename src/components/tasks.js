@@ -65,11 +65,9 @@ class Tasks extends Component {
       //  this.props.getTaskItem()
       // }
       
-      deleteTaskItem = (event)=>{
-        event.preventDefault();
+      deleteTaskItem = ()=>{
        let id = this.props.task.id
         axios.delete(`/tasks/${id}`)
-        console.log(event.target.value)
         this.props.getTaskItem()
       }
       
