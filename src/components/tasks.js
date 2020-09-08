@@ -12,59 +12,33 @@ class Tasks extends Component {
     constructor(){
         super()
         this.state = {
-          taskList:[],
-            id:'',
-            task:'',
-           dueDate:'',
-           status:'',
-          
+          taskList:[], 
+          showStatus:false
         }
       }
       
     componentDidMount(){
-        this.getTaskItem();
+     this.setState({
+      id:this.props.task.id,
+      task:this.props.task.task,
+     dueDate:this.props.task.dueDate,
+     status:this.props.task.status,
+     })
       }
       
-      
-      getTaskItem = (event) => {
-        // event.preventDefault();
-        console.log('in getTaskItem')
-        axios.get('/tasks')
-          .then( response => {
-            const iStatus =[]
-            const arr = [...new Set(response.data)]
-              arr.forEach(item => iStatus.push(item.status))
-      // console.log('this is a new array', ...arr)
-      // console.log('this is each tasks status', Object.values(iStatus))
-      const itemStatus = iStatus.map(item => item)
-      
-            this.setState({
-              taskList: response.data,
-              status: itemStatus.forEach(item=>item),
-            })
-          })
-          .catch( error => {
-            alert(`Couldn't get inventory. Try again later`);
-            console.log('Error ', error);
-          })
+      showStatus = () =>{
+        this.setState({
+            showStatus: !this.state.showStatus
+        })
       }
-      
+
       handleInputChangeFor = propertyName => (event) =>{
         this.setState({
           [propertyName]:event.target.value
         })
       } 
       
-      // addTaskItem = (event) => {
-      //   event.preventDefault();
-      //   axios.post('/tasks',{
-      //     task: this.state.task, 
-      //     dueDate:this.state.dueDate, 
-      //     status:'Task Not Completed'
-      //    })
-      //  this.props.getTaskItem()
-      // }
-      
+ 
       deleteTaskItem = ()=>{
        let id = this.props.task.id
         axios.delete(`/tasks/${id}`)
@@ -89,26 +63,26 @@ class Tasks extends Component {
              <label>ID:</label><Input  
                    type="text"
                    name="id"
-                   value={this.state.id}
+                   value={task.id}
                    onChange={(event) => {this.handleInputChangeFor(event,'id')}}  
                    />
 
              <label>Task:</label><Textarea 
                   type="text"
                    name="task"
-                   value={this.state.task}
+                   value={task.task}
                    onChange={(event) => {this.handleInputChangeFor(event,'task')}}
                    />
              <label>Due Date:</label><Input 
                   type="text"
                    name="dueDate"
-                   value={moment(this.state.dueDate).format('MMM-Do-YYYY')}
+                   value={moment(task.dueDate).format('MMM-Do-YYYY')}
                    onChange={(event) => {this.handleInputChangeFor(event,'dueDate')}}
                    />
              <label>Status</label><Input 
                     type="text" 
                     name='status'
-                    value={this.state.status}
+                    value={task.status}
                     onChange={(event) => {this.handleInputChangeFor(event,'status')}}
              />
          </Form>
@@ -119,8 +93,8 @@ class Tasks extends Component {
                              <label>Task:</label><p>{task.task}</p>
                              <label>Due Date:</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
                              <label>Status:</label><p>{task.status}</p>
-                             <button value={task.id} onClick={this.deleteTaskItem}>Delete</button>
-                             <button value={task.id} onClick={this.deleteTaskItem}>Edit</button>
+                             <button onClick={this.deleteTaskItem}>Delete</button>
+                             <button onClick={this.showStatus}>Edit</button>
          </Form>
          }
           return (

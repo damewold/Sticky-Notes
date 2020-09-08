@@ -5,6 +5,7 @@ import Tasks from '../tasks'
 import Panel from 'muicss/lib/react/panel';
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
+import Textarea from 'muicss/lib/react/textarea';
 // import moment from 'moment';
 
 
@@ -34,13 +35,6 @@ class App extends Component {
           [propertyName]:event.target.value
         })
       } 
-      showStatus = () =>{
-        this.setState({
-            showStatus: !this.state.showStatus
-        })
-      }
-
-
         getTaskItem = () => {
           console.log('I am in getTaskItem')
         axios.get('/tasks')
@@ -72,7 +66,7 @@ class App extends Component {
               <header className="App-header">
                 <h1 className="App-title">To Do App</h1>
               </header>
-              <Form >  <label>Task:</label><Input 
+              <Form >  <label>Task:</label><Textarea
                                                     id='task' 
                                                     type="text" 
                                                     placeholder="Write the task to be done"   
