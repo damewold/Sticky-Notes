@@ -32,12 +32,11 @@ class Tasks extends Component {
         })
       }
 
-      handleInputChangeFor = propertyName => (event) =>{
+      handleInputChange = (event, propertyName)  =>{
         this.setState({
-          [propertyName]:event.target.value
-        })
-      } 
-      
+            [propertyName]:event.target.value
+          }) 
+    }
  
       deleteTaskItem = ()=>{
        let id = this.props.task.id
@@ -63,27 +62,27 @@ class Tasks extends Component {
              <label>ID:</label><Input  
                    type="text"
                    name="id"
-                   value={task.id}
-                   onChange={(event) => {this.handleInputChangeFor(event,'id')}}  
+                   value={this.state.id}
+                   onChange={(event) => {this.handleInputChange(event,'id')}}  
                    />
 
              <label>Task:</label><Textarea 
                   type="text"
                    name="task"
-                   value={task.task}
-                   onChange={(event) => {this.handleInputChangeFor(event,'task')}}
+                   value={this.state.task}
+                   onChange={(event) => {this.handleInputChange(event,'task')}}
                    />
              <label>Due Date:</label><Input 
                   type="text"
                    name="dueDate"
-                   value={moment(task.dueDate).format('MMM-Do-YYYY')}
-                   onChange={(event) => {this.handleInputChangeFor(event,'dueDate')}}
+                   value={this.state.dueDate}
+                   onChange={(event) => {this.handleInputChange(event,'dueDate')}}
                    />
              <label>Status</label><Input 
                     type="text" 
                     name='status'
-                    value={task.status}
-                    onChange={(event) => {this.handleInputChangeFor(event,'status')}}
+                    value={this.state.status}
+                    onChange={(event) => {this.handleInputChange(event,'status')}}
              />
          </Form>
          }else{
