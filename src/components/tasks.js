@@ -45,12 +45,14 @@ class Tasks extends Component {
         this.props.getTaskItem()
       }
       
-      editTaskItem = (event)=>{
-        event.preventDefault();
-      //  let id = event.target.value
-      //   axios.put(`/tasks/${id}`)
-        console.log(event.target.value)
-        // this.getTaskItem();
+      editTaskItem = ()=>{
+       axios.put('/tasks', {
+        id:this.state.id,
+        task:this.state.task,
+       dueDate:this.state.dueDate,
+       status:this.state.status,
+       })
+        this.props.getTaskItem();
       }
       
     
@@ -59,7 +61,7 @@ class Tasks extends Component {
         let itemToRender;
         const task = this.props.task
          if(this.state.showStatus){
-           itemToRender = <Form>
+           itemToRender = <Form onSubmit={this.editTaskItem}>
              <label>ID:</label><Input  
                    type="text"
                    name="id"

@@ -55,32 +55,23 @@ router.delete('/:id', (req, res) => {
 })
 
 // // Change rank on my song - body will say up or down
-// router.put('/rank/:id', (req, res) => {
-//     let songId = req.params.id;
-//     // Direction will come from the client and say up or down
-//     let direction = req.body.direction;
-//     let sqlText = '';
-
-//     if (direction === 'up') {
-//         // use rank-1, so it get's closer to the awesome rank of 1
-//         sqlText = `UPDATE songs SET rank=rank-1 WHERE id=$1`;
-//     } else if (direction == 'down') {
-//         sqlText = `UPDATE songs SET rank=rank+1 WHERE id=$1`;
-//     } else {
-//         // If we don't get an expected direction, send back bad status
-//         res.sendStatus(500);
-//         return; // Do it now, don't run code below
-//     }
-
-//     pool.query(sqlText, [songId])
-//         .then((result) => {
-//             res.sendStatus(200);
-//         })
-//         .catch((error) => {
-//             console.log(`Error making database query ${sqlText}`, error);
-//             res.sendStatus(500);
-//         })
-// })
+router.put('/', (req, res) => {
+    console.log(req.body)
+    //Update the sticky note
+    const id =req.body.id;
+   const task=req.body.task;
+   const  dueDate=req.body.dueDate;
+   const status=req.body.status
+    const queryText = ` UPDATE "tasksTable" SET "id"=$1 ,"status"=$2,"task"=$3,"dueDate"=$4 WHERE "tasksTable"."id"=$1;`;
+    pool.query(queryText, [id, status, task, dueDate])
+        .then( (result) => {
+            res.sendStatus(200);
+        })
+        .catch( (error) => {
+            console.log(`Error in updating book from the database ${error}`);
+            res.sendStatus(500);
+        });
+});
 
 
 module.exports = router;
