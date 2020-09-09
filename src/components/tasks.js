@@ -4,6 +4,7 @@ import moment from 'moment';
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
 import Button from 'muicss/lib/react/button';
+import { Textarea } from 'muicss/react';
 import '../components/App/App.css';
 
 
@@ -61,20 +62,20 @@ class Tasks extends Component {
         const task = this.props.task
          if(this.state.showStatus){
            itemToRender = <Form className='form' onSubmit={this.editTaskItem}>
-             <label>Task ID:</label><Input  
+             <label>Task ID</label><Input  
                    type="text"
                    name="id"
                    value={this.state.id}
                    onChange={(event) => {this.handleInputChange(event,'id')}}  
                    />
 
-             <label>Task:</label><Input
+             <label>Task</label><Textarea
                   type="text"
                    name="task"
                    value={this.state.task}
                    onChange={(event) => {this.handleInputChange(event,'task')}}
                    />
-             <label>Due Date:</label><Input 
+             <label>Due Date</label><Input 
                   type="text"
                    name="dueDate"
                    value={this.state.dueDate}
@@ -92,10 +93,10 @@ class Tasks extends Component {
          }else{
            itemToRender =
           <Form className='form-Container' key={task.id}>
-                              <div className='id'><label>Task ID:</label><p>{task.id}</p></div>
-                              <div className="task"><label>Task:</label><p>{task.task}</p></div>
-                              <div className='dueDate'><label>Due Date:</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p></div>
-                              <div className='status'><label>Status:</label><p>{task.status}</p></div>
+                              <div className='id'><label>Task ID</label><p>{task.id}</p></div>
+                              <div className="task"><label>Task</label><Textarea  className='task-textarea' value={task.task} readOnly /></div>
+                              <div className='dueDate'><label>Due Date</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p></div>
+                              <div className='status'><label>Status</label><p>{task.status}</p></div>
                              <div className='btn'><Button  onClick={this.deleteTaskItem}>Delete</Button>
                              <Button className='btn' onClick={this.showStatus}>Edit</Button></div>
          </Form>
