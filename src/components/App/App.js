@@ -73,7 +73,7 @@ class App extends Component {
         <div className="App-container">
               <div className='container-form-create'>
               <Form className="form-create">
-              <h2 className='create' >Create a Task</h2> 
+              <h2 className='create' >ADD New Task</h2> 
                 <div className='create-textarea'><label>Task:</label><Textarea
                                                     id='task' 
                                                     type="text" 

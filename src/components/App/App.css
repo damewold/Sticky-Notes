@@ -26,10 +26,10 @@ font-weight: bold;
 }
 .App-header {
   margin-bottom: 10px;
-  background-color: black;
+  background-color:black;
   height: 70px;
-  color:red;
-  font: fantasy;
+  color: hsl(0, 100%, 50%);
+  font: georgia;
   position: fixed;
   top: 0px;
   display: flex;
@@ -106,7 +106,7 @@ width:100%;
   height: 50px;
   border: 1px solid red;
   border-radius:10px;
-  width: 100%
+  width: 300px;
 }
 
 .create{
@@ -142,16 +142,20 @@ vertical-align: middle;
 
 textarea{
   height: 100px;
-  font-family: 'Courier New', Courier, monospace, georgia, times, serif;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
 }
 
 .task-textarea{
   height: 100px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: bold;
   margin: .7em;
+  border:white;
+  border-radius:10px;
+  text-align:justify;
+}
 
-
+.task-textarea:hover,.task-textarea:focus{
+  border: 1px solid red;
 }
 .task{
   padding-right:2em;
