@@ -44,7 +44,7 @@
   font-size: large;
 }
 
-input[type=text]{
+input[type=text], textarea{
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -63,4 +63,30 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin:2em;
+}
+
+.form-Container{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-create{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 50px;
+  border: 1px solid red;
+  border-radius:10px;
+  
+}
+
+.form-Container{
+  display: table-cell;
+  vertical-align: middle;
+  height: 50px;
+  border: 1px solid red;
+  border-radius:10px;
 }
