@@ -131,3 +131,11 @@ h2{
   display: inline-block;
 vertical-align: middle;
 }
+
+.mui-panel{
+  width:300px;
+}
+
+textarea{
+  height: 100px;
+}
