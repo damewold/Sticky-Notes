@@ -91,13 +91,13 @@ class Tasks extends Component {
          </Form>
          }else{
            itemToRender =
-          <Form className='form' key={task.id}>
-                              <label>Task ID:</label><p>{task.id}</p>
-                             <label>Task:</label><div className="task"><p>{task.task}</p></div>
-                             <label>Due Date:</label><div className='dueDate'><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p></div>
-                             <label>Status:</label><div className='status'><p>{task.status}</p></div>
-                             <Button className='btn' onClick={this.deleteTaskItem}>Delete</Button>
-                             <Button className='btn' onClick={this.showStatus}>Edit</Button>
+          <Form className='form-Container' key={task.id}>
+                              <div className='id'><label>Task ID:</label><p>{task.id}</p></div>
+                              <div className="task"><label>Task:</label><p>{task.task}</p></div>
+                              <div className='dueDate'><label>Due Date:</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p></div>
+                              <div className='status'><label>Status:</label><p>{task.status}</p></div>
+                             <div className='btn'><Button  onClick={this.deleteTaskItem}>Delete</Button>
+                             <Button className='btn' onClick={this.showStatus}>Edit</Button></div>
          </Form>
          }
           return (

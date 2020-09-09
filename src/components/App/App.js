@@ -69,7 +69,7 @@ class App extends Component {
               </header>
         <div className="App-container">
               <div className='container-form-create'>
-              <Form className="form-create"><div className='create-inputs'><label>Task:</label><Textarea
+              <Form className="form-create"><div className='create-textarea'><label>Task:</label><Textarea
                                                     id='task' 
                                                     type="text" 
                                                     placeholder="Write the task to be done"   
@@ -77,13 +77,13 @@ class App extends Component {
                                                     onChange={this.handleInputChangeFor("task")}
                                                     /></div>
       
-             <div className='create-inputs'><label>Due Date:</label><Input 
+             <div className='create-input'><label>Due Date:</label><Input 
                                                              id='dueDate' 
                                                              type='date'
                                                              value={this.state.dueDate}
                                                              onChange={this.handleInputChangeFor("dueDate")}
                                                              /></div> 
-              <Button onClick={this.addTaskItem}>Add Task</Button></Form>
+              <Button className='create-btn' onClick={this.addTaskItem}>Add Task</Button></Form>
               </div>
              
             

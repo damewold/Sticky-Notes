@@ -5,6 +5,10 @@
 .App-container{
   display: flex;
   margin: 4em;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-flow: nowrap;
+  flex:space-between;
 }
 
 .container-form-create{
@@ -13,6 +17,7 @@
 
 .container-stickyNotes{
   flex: 4;
+  margin:2em;
 }
 .App-header {
   background-color: #222;
@@ -39,69 +44,23 @@
   font-size: large;
 }
 
-.task-container{
-  background-color: whitesmoke;
-  margin: 0.5em;
-  padding-bottom: 5em;
-  border-radius: 10px;
+input[type=text]{
   width: 100%;
-}
-
-form {
-  position : relative;
-  margin : 0 auto;
-  padding: 1em;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   box-sizing: border-box;
-  font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-textarea {
-  height: 200px;
-}
-.create-inputs{
-  display: inline-block;
-}
-
-label{
-  font: 15px;
-  font-weight: bolder;
-
-}
-
-
-textarea:hover,
-textarea:focus,
-input:hover,
-input:focus {
-  border: 2px solid red;
-  border-radius: 5px;
-}
-
-label {
-  font : 1em "typewriter", sans-serif;
-  display: inline-block;
-  width: 140px;
-  text-align: left;
-}
 button {
-  padding      : 5px;
-  font         : bold .6em sans-serif;
-  border       : 2px solid #333;
+  background-color:grey;
+  color: white;
+  padding: 12px 20px;
+  border: none;
   border-radius: 5px;
-  background   : none;
-  cursor       : pointer;
-  transform    : rotate(-1.5deg);
-}
-
-
-button:hover,
-button:focus {
-  outline     : none;
-  background  : #000;
-  color       : #FFF;
-  
-}
-
-.form-create{
-  
+  cursor: pointer;
+  margin:2em;
 }
