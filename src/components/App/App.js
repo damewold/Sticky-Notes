@@ -6,6 +6,7 @@ import Panel from 'muicss/lib/react/panel';
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
 import Button from 'muicss/lib/react/button';
+import { Textarea } from 'muicss/react';
 // import moment from 'moment';
 
 
@@ -63,11 +64,12 @@ class App extends Component {
      render(){
     return(
       <div className="App">
-              <header className="App-header">
+         <header className="App-header">
                 <h1 className="App-title">My Sticky Notes</h1>
               </header>
+        <div className="App-container">
               <div className='container-form-create'>
-              <Form className="form-create">  <label>Task:</label><Input
+              <Form className="form-create">  <label>Task:</label><Textarea
                                                     id='task' 
                                                     type="text" 
                                                     placeholder="Write the task to be done"   
@@ -88,6 +90,7 @@ class App extends Component {
             
               <div className='stickyNotes-Container'>
            {this.state.taskList.map(task =><Panel key={task.id}><div className='task-container'><Tasks  getTaskItem={this.getTaskItem} task={task}/></div></Panel>)}
+           </div>
            </div>
             </div>
           
