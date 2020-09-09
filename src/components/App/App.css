@@ -12,7 +12,8 @@
 }
 
 .container-form-create{
-  flex:1
+  flex:1;
+  margin-top: 80px;
 }
 
 .container-stickyNotes{
@@ -20,11 +21,19 @@
   margin:2em;
 }
 .App-header {
+  margin-bottom: 10px;
   background-color: #222;
   height: 70px;
-  padding: 20px;
   color: white;
-  width:cover;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  padding:10px 30px;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  transition: padding 300ms ease;
+
 
 }
 
@@ -38,6 +47,7 @@
   position: relative;
   grid-template-columns: auto auto auto;
   grid-gap: 45px;
+  margin-top: 80px;
 }
 
 .App-intro {
@@ -81,7 +91,7 @@ button {
   border: 1px solid red;
   border-radius:10px;
 width:100%;
-  
+  clear: both;
 }
 
 .form-Container{
@@ -103,14 +113,18 @@ vertical-align:middle;
 justify-content: start; */
 /* } */ */
 
-p{
+p,input{
 display: inline-block;
 vertical-align:middle;
-width:80%;
+width:50%;
 wrap:break-word;
 font-style: normal;
 font: x-large;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+clear: both;
+justify-content: center;
+padding:3em;
+
 }
 
 h2{
