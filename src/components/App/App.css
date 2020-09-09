@@ -80,6 +80,7 @@ button {
   height: 50px;
   border: 1px solid red;
   border-radius:10px;
+width:100%;
   
 }
 
@@ -89,4 +90,30 @@ button {
   height: 50px;
   border: 1px solid red;
   border-radius:10px;
+}
+
+.create{
+  align-items:center ;
+}
+
+/* label,textarea,input,p{
+display: inline-block;
+vertical-align:middle;
+/* margin-right:.5em;
+justify-content: start; */
+/* } */ */
+
+p{
+display: inline-block;
+vertical-align:middle;
+width:80%;
+wrap:break-word;
+font-style: normal;
+font: x-large;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2{
+  display: inline-block;
+vertical-align: middle;
 }
