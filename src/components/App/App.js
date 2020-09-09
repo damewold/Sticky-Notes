@@ -41,8 +41,11 @@ class App extends Component {
         axios.get('/tasks')
           .then( response => {
             console.log('I was Clicked several times')
+            let arr=[];
+            arr.push(...response.data)
+            arr.reverse()
             this.setState({
-              taskList: response.data
+              taskList: arr
             })
           })
           .catch( error => {
