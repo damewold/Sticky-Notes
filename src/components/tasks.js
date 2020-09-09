@@ -3,7 +3,6 @@ import axios from 'axios'
 import moment from 'moment';
 import Form from 'muicss/lib/react/form';
 import Input from 'muicss/lib/react/input';
-import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
 import '../components/App/App.css';
 
@@ -61,7 +60,7 @@ class Tasks extends Component {
         let itemToRender;
         const task = this.props.task
          if(this.state.showStatus){
-           itemToRender = <Form onSubmit={this.editTaskItem}>
+           itemToRender = <Form className='form' onSubmit={this.editTaskItem}>
              <label>Task ID:</label><Input  
                    type="text"
                    name="id"
@@ -69,7 +68,7 @@ class Tasks extends Component {
                    onChange={(event) => {this.handleInputChange(event,'id')}}  
                    />
 
-             <label>Task:</label><Textarea 
+             <label>Task:</label><Input
                   type="text"
                    name="task"
                    value={this.state.task}
@@ -92,13 +91,13 @@ class Tasks extends Component {
          </Form>
          }else{
            itemToRender =
-          <Form key={task.id}>
+          <Form className='form' key={task.id}>
                               <label>Task ID:</label><p>{task.id}</p>
-                             <label>Task:</label><p>{task.task}</p>
-                             <label>Due Date:</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
-                             <label>Status:</label><p>{task.status}</p>
-                             <button onClick={this.deleteTaskItem}>Delete</button>
-                             <button onClick={this.showStatus}>Edit</button>
+                             <label>Task:</label><div className="task"><p>{task.task}</p></div>
+                             <label>Due Date:</label><div className='dueDate'><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p></div>
+                             <label>Status:</label><div className='status'><p>{task.status}</p></div>
+                             <Button className='btn' onClick={this.deleteTaskItem}>Delete</Button>
+                             <Button className='btn' onClick={this.showStatus}>Edit</Button>
          </Form>
          }
           return (
