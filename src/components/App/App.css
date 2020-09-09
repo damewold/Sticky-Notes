@@ -55,6 +55,13 @@ form {
   font    : 1.4em/1.5em "handwriting", cursive, sans-serif;
 }
 
+textarea {
+  height: 200px;
+}
+.create-inputs{
+  display: inline-block;
+}
+
 label{
   font: 15px;
   font-weight: bolder;
@@ -92,5 +99,9 @@ button:focus {
   outline     : none;
   background  : #000;
   color       : #FFF;
+  
+}
+
+.form-create{
   
 }
