@@ -71,6 +71,9 @@ input[type=text], input[type=date], textarea{
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  font:large;
+  font-weight: bold;
+  font-family:icon,Georgia, Times, 'Times New Roman', serif
 }
 
 button {
