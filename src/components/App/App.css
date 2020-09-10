@@ -12,22 +12,24 @@ font-weight: bold;
   flex-direction: column;
   flex-wrap: nowrap;
   flex-flow: nowrap;
-  flex:space-between;
+width:fit-content;
 }
 
 .container-form-create{
   flex:1;
-  margin-top: 80px;
+  margin-top: 120px;
+  margin-right: 4em;
 }
 
 .container-stickyNotes{
   flex: 4;
   margin:2em;
+  
 }
 .App-header {
   margin-bottom: 10px;
   background-color:black;
-  height: 70px;
+  height: 50px;
   color: hsl(0, 100%, 50%);
   font: georgia;
   position: fixed;
@@ -52,8 +54,8 @@ z-index: 99;
   display: grid;
   position: relative;
   grid-template-columns: auto auto auto;
-  grid-gap: 45px;
-  margin-top: 80px;
+  grid-gap: 1em;
+  margin-top: 7.6em;
 }
 
 .App-intro {
@@ -111,12 +113,24 @@ width:100%;
 }
 
 @media screen and (max-width: 400px){
+  .App {
+    text-align: center;
+    font-style: normal;
+  font: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  margin: 0 auto;
+  width: max-content;
+  }
   .App-container{
        border-style: solid;
       border: .5em black;
       margin-top: 1em;
       width: 90%;
+      padding-right: 2em;
+      padding-left: 2em;
       margin: 0 auto;
+     
       padding-top: 0px;
       padding-bottom: 0px;
       display:flex;
@@ -125,9 +139,10 @@ width:100%;
   .App-header {
     margin-bottom: 10px;
     background-color:black;
-    height: 50px;
+    margin: 0 auto;
     color: hsl(0, 100%, 50%);
     font: georgia;
+    text-align: initial;
     position: fixed;
     top: 0px;
     display: flex;
@@ -139,12 +154,12 @@ width:100%;
   opacity: .7;
   z-index: 99;
   
+  
   }
   .container-form-create{
     flex:1;
-    margin-right:0em ;
     margin-top: 120px;
-    width: 100%;
+    width: max-content;
   }
   
   .container-stickyNotes{
@@ -169,17 +184,14 @@ width:100%;
     height: 50px;
     border: 1px solid red;
     border-radius:10px;
-  width: 300px;;
+  width: 16em;
     clear: both;
   }
+
+  .mui-panel{
+    width: 19em;
+  }
 }
-
-
-
-
-
-
-
 .create{
   align-items:center ;
 }
@@ -208,7 +220,7 @@ vertical-align: middle;
 }
 
 .mui-panel{
-  width:300px;
+  width: 19em;
 }
 
 textarea{
