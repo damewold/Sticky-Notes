@@ -95,7 +95,7 @@ class Tasks extends Component {
           <form className='form-Container' key={task.id}>
                               <label>Task ID</label><p>{task.id}</p>
                               <label>Task</label><p  className='task-textarea' >{task.task} </p>
-                             <label>Due Date</label><p>{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
+                             <label>Due Date</label><p className='date' >{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
                              <label>Status</label><p>{task.status}</p>
                              <div className='btn'><Button  onClick={this.deleteTaskItem}>Delete</Button>
                              <Button className='btn' onClick={this.showStatus}>Edit</Button></div>

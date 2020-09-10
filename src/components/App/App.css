@@ -107,7 +107,78 @@ width:100%;
   border: 1px solid red;
   border-radius:10px;
   width: 300px;
+  background-color:#f2f2f2;
 }
+
+@media screen and (max-width: 400px){
+  .App-container{
+       border-style: solid;
+      border: .5em black;
+      margin-top: 1em;
+      width: 90%;
+      margin: 0 auto;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      display:flex;
+      flex-direction: column;
+  }
+  .App-header {
+    margin-bottom: 10px;
+    background-color:black;
+    height: 50px;
+    color: hsl(0, 100%, 50%);
+    font: georgia;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    padding:10px 30px;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    transition: padding 300ms ease;
+  opacity: .7;
+  z-index: 99;
+  
+  }
+  .container-form-create{
+    flex:1;
+    margin-right:0em ;
+    margin-top: 120px;
+    width: 100%;
+  }
+  
+  .container-stickyNotes{
+    flex: 1;
+    margin:2em;
+    width:100%;
+  }
+
+  .stickyNotes-Container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 2.5em;
+  }
+
+  .form-create{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: table-cell;
+    vertical-align: middle;
+    height: 50px;
+    border: 1px solid red;
+    border-radius:10px;
+  width: 300px;;
+    clear: both;
+  }
+}
+
+
+
+
+
+
 
 .create{
   align-items:center ;
@@ -142,20 +213,24 @@ vertical-align: middle;
 
 textarea{
   height: 100px;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:hand, fantasy, icon, georgia,times,;
   font-weight: bold;
 }
 
 .task-textarea{
   height: 100px;
   margin: .7em;
-  border:white;
   border-radius:10px;
   text-align:justify;
+  padding: .5em;
+  background-color:white;
+  border: 1px solid black;
 }
 
-.task-textarea:hover,.task-textarea:focus{
-  border: 1px solid red;
+
+
+input,textarea:hover,input,textarea:focus{
+  border: 1px solid blue;
 }
 .task{
   padding-right:2em;
@@ -164,4 +239,5 @@ textarea{
 .id{
   padding-top: 2em;
 }
+
 
