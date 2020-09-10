@@ -68,13 +68,13 @@ class App extends Component {
     return(
       <div className="App">
          <header className="App-header">
-                <h1 className="App-title">My Sticky Notes</h1>
+                <h1 className="App-title">MY STICKY NOTES</h1>
               </header>
         <div className="App-container">
               <div className='container-form-create'>
               <form className="form-create">
-              <h2 className='create' >ADD New Task</h2> 
-                <div className='create-textarea'><label>Task:</label><textarea
+             <div className="notes"><h2 className='create' >ADD NEW TASK</h2> 
+                <div className='create-textarea'><label>TASK:</label><textarea
                                                     id='task' 
                                                     type="text" 
                                                     placeholder="Write the task to be done"   
@@ -82,13 +82,13 @@ class App extends Component {
                                                     onChange={this.handleInputChangeFor("task")}
                                                     /></div>
       
-             <div className='create-input'><label>Due Date:</label><input 
+             <div className='create-input'><label>DUE DATE:</label><input 
                                                              id='dueDate' 
                                                              type='date'
                                                              value={this.state.dueDate}
                                                              onChange={this.handleInputChangeFor("dueDate")}
                                                              /></div> 
-              <Button className='create-btn' onClick={this.addTaskItem}>Add Task</Button></form>
+              <Button className='create-btn' onClick={this.addTaskItem}>ADD TASK</Button></div> </form>
               </div>
              
             

@@ -110,6 +110,7 @@ width:16.35em;
 
 .form-Container{
   display: table-cell;
+  padding:1em;
   vertical-align: middle;
   height: 50px;
   border: 1px solid red;
@@ -197,6 +198,7 @@ width:16.35em;
 
   .mui-panel{
     width: 19em;
+    border-radius:10px
   }
 }
 .create{
@@ -286,5 +288,13 @@ p{
 
 label{
   font: 5em;
-  
+}
+.notes{
+  text-align:left;
+  margin: 0 auto;
+}
+
+button{
+  margin-top: 0.4em;
+  margin-bottom: 0;
 }

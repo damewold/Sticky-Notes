@@ -62,43 +62,43 @@ class Tasks extends Component {
         const task = this.props.task
          if(this.state.showStatus){
            itemToRender = <Form className='form' onSubmit={this.editTaskItem}>
-             <label>Task ID</label><Input  
+          <div className='notes'><label>TASK ID</label><Input  
                    type="text"
                    name="id"
                    value={this.state.id}
                    onChange={(event) => {this.handleInputChange(event,'id')}}  
                    />
 
-             <label>Task</label><Textarea
+             <label>TASK</label><Textarea
                   type="text"
                    name="task"
                    value={this.state.task}
                    onChange={(event) => {this.handleInputChange(event,'task')}}
                    />
-             <label>Due Date</label><Input 
+             <label>DUE DATE</label><Input 
                   type="text"
                    name="dueDate"
                    value={this.state.dueDate}
                    onChange={(event) => {this.handleInputChange(event,'dueDate')}}
                    />
-             <label>Status</label><Input 
+             <label>STATUS</label><Input 
                     type="text" 
                     name='status'
                     value={this.state.status}
                     onChange={(event) => {this.handleInputChange(event,'status')}}
              />
                        <Button  onClick={this.showStatus}>Back</Button>
-                               <Button >submit</Button>
+                               <Button >submit</Button></div>   
          </Form>
          }else{
            itemToRender =
           <form className='form-Container' key={task.id}>
-                              <label>Task ID</label><p>{task.id}</p>
-                              <label>Task</label><p  className='task-textarea' >{task.task} </p>
-                             <label>Due Date</label><p className='date' >{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
-                             <label>Status</label><p>{task.status}</p>
+                           <div className='notes'><label>TASK ID</label><p>{task.id}</p>
+                              <label>TASK</label><p  className='task-textarea' >{task.task} </p>
+                             <label>DUE DATE</label><p className='date' >{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
+                             <label>STATUS</label><p>{task.status}</p>
                              <div className='btn'><Button  onClick={this.deleteTaskItem}>Delete</Button>
-                             <Button className='btn' onClick={this.showStatus}>Edit</Button></div>
+                             <button className='btn' onClick={this.showStatus}>Edit</button></div></div>   
          </form>
          }
           return (
