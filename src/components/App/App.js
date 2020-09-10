@@ -82,7 +82,7 @@ class App extends Component {
                                                     onChange={this.handleInputChangeFor("task")}
                                                     /></div>
       
-             <div className='create-input'><label>Due Date:</label><Input 
+             <div className='create-input'><label>Due Date:</label><input 
                                                              id='dueDate' 
                                                              type='date'
                                                              value={this.state.dueDate}
