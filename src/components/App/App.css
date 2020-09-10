@@ -27,7 +27,7 @@ width:fit-content;
   
 }
 .App-header {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   background-color:black;
   height: 50px;
   color: hsl(0, 100%, 50%);
@@ -95,10 +95,10 @@ button {
   padding: 20px;
   display: table-cell;
   vertical-align: middle;
-  height: 50px;
-  border: 1px solid red;
+  height: 26em;
+  border: 1px solid green;
   border-radius:10px;
-width:100%;
+width:16.35em;
   clear: both;
 }
 
@@ -178,7 +178,8 @@ width:100%;
   .form-create{
     border-radius: 5px;
     background-color: #f2f2f2;
-    padding: 20px;
+    margin:0 auto;
+    padding: .4em;
     display: table-cell;
     vertical-align: middle;
     height: 50px;
@@ -224,9 +225,14 @@ vertical-align: middle;
 }
 
 textarea{
-  height: 100px;
-  font-family:hand, fantasy, icon, georgia,times,;
-  font-weight: bold;
+  height: 10em;
+  margin-right: .7em;
+  border-radius:10px;
+  text-align:justify;
+  padding: .5em;
+  background-color:white;
+  border: 1px solid black;
+
 }
 
 .task-textarea{
@@ -243,6 +249,14 @@ textarea{
 
 input,textarea:hover,input,textarea:focus{
   border: 1px solid blue;
+}
+
+button:hover, button:focus{
+  border: 1px solid blue;
+  background-color:white;
+  color:red;
+  font: large ;
+  font-weight: bold;
 }
 .task{
   padding-right:2em;
