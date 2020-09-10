@@ -119,6 +119,103 @@ width:16.35em;
   background-color:#f2f2f2;
 }
 
+@media screen and (min-width: 400px) and (max-width:900px){
+  .App {
+    text-align: center;
+    font-style: normal;
+  font: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  width: max-content;
+  }
+  .App-container{
+       border-style: solid;
+      border: .5em black;
+      margin-top: 1em;
+      width: 90%;
+      padding-right: 2em;
+      padding-left: 2em;
+      margin: 0 auto;
+     
+      padding-top: 0px;
+      padding-bottom: 0px;
+      display:flex;
+      flex-direction: column;
+  }
+
+  .App-title{
+    margin-left: 5.5em;
+  }
+  .App-header {
+    margin-bottom: 10px;
+    background-color:black;
+    margin: 0 auto;
+    color: hsl(0, 100%, 50%);
+    font: georgia;
+    text-align: initial;
+    position: fixed;
+    top: 0px;
+    display: flex;
+    padding-left: 7em;
+    align-items: center;
+    justify-content: space-between;
+    width:100%;
+    transition: padding 300ms ease;
+  opacity: .7;
+  z-index: 99;
+  
+  
+  }
+  .container-form-create{
+    flex:1;
+    margin:10em auto auto;
+    width: max-content;
+    padding-left: 1em;
+  }
+  
+  .container-stickyNotes{
+    flex: 1;
+    margin:2em;
+    width:100%;
+  }
+
+  .stickyNotes-Container{
+    display: grid;
+    position: relative;
+    grid-template-columns: auto  auto;
+    grid-gap: 1em;
+    margin-top: 7.6em;
+    margin-top: 2.5em;
+  }
+
+  .form-create{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin:0 auto;
+    padding: 1em;
+    display: table-cell;
+    vertical-align: middle;
+    height: 26em;
+    border: 1px solid green;
+    border-radius:10px;
+  width: 17em;
+    clear: both;
+
+  }
+
+  .mui-panel{
+    width: 19em;
+    border-radius:10px
+  }
+
+  .create-btn{
+    margin-right: 2em;
+    margin-left: 5.5em;
+  }
+}
+
+
 @media screen and (max-width: 400px){
   .App {
     text-align: center;
@@ -190,7 +287,7 @@ width:16.35em;
     padding: 1em;
     display: table-cell;
     vertical-align: middle;
-    height: 50px;
+    height: 26em;
     border: 1px solid green;
     border-radius:10px;
   width: 17em;
@@ -304,4 +401,9 @@ label{
 button{
   margin-top: 0.4em;
   margin-bottom: 0;
+}
+
+.create-btn{
+  margin-right: 2em;
+  margin-left: 5.5em;
 }
