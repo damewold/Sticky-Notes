@@ -66,7 +66,7 @@ input[type=text], input[type=date], textarea{
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
@@ -76,6 +76,9 @@ input[type=text], input[type=date], textarea{
   font-family:icon,Georgia, Times, 'Times New Roman', serif
 }
 
+input[type=date]:focus,input[type=date]:hover{
+
+}
 button {
   background-color:grey;
   color: white;
@@ -269,4 +272,9 @@ button:hover, button:focus{
   padding-top: 2em;
 }
 
-
+p{
+  font: large;
+  font-weight: bold;
+  font-family: times, monospace, georgia, serif;
+  
+}
