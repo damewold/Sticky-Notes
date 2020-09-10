@@ -88,7 +88,7 @@ class App extends Component {
                                                              value={this.state.dueDate}
                                                              onChange={this.handleInputChangeFor("dueDate")}
                                                              /></div> 
-              <Button className='create-btn' onClick={this.addTaskItem}>ADD TASK</Button></div> </form>
+              <button className='create-btn' onClick={this.addTaskItem}>ADD TASK</button></div> </form>
               </div>
              
             
