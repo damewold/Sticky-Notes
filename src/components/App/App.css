@@ -228,6 +228,7 @@ vertical-align: middle;
 
 .mui-panel{
   width: 19em;
+  margin: 0 auto;
 }
 
 textarea{
@@ -276,5 +277,14 @@ p{
   font: large;
   font-weight: bold;
   font-family: times, monospace, georgia, serif;
+  background-color:white;
+  padding:.7em;
+  margin:.7em;
+  border:1px solid black;
+  border-radius:10px;
+}
+
+label{
+  font: 5em;
   
 }
