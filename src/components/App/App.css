@@ -309,12 +309,7 @@ width:16.35em;
   align-items:center ;
 }
 
-/* label,textarea,input,p{
-display: inline-block;
-vertical-align:middle;
-/* margin-right:.5em;
-justify-content: start; */
-/* } */ */
+
 
 input,.id,.task,.status{
 display: inline-block;
