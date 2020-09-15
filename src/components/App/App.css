@@ -131,7 +131,7 @@ width: 19em;
   width: 100%;
 }
 
-@media screen and (min-width: 600px) and (max-width:1151px){
+@media screen and (min-width: 900px) and (max-width:1151px){
   .App {
     text-align: center;
     font-style: normal;
@@ -198,7 +198,105 @@ z-index: 99;
     position: relative;
     grid-template-columns: auto  auto auto;
     grid-gap: 2em;
- 
+    margin-top: 7.6em;
+    margin-top: 2.5em;
+   
+  }
+
+  .form-create{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    margin:0 auto;
+    padding: 1em;
+    display: table-cell;
+    vertical-align: middle;
+    height: 26em;
+    border: 1px solid green;
+    border-radius:10px;
+  width: 100%;
+    clear: both;
+
+  }
+
+  .mui-panel{
+    width: 100%;
+    border-radius:10em
+  }
+
+  .create-btn{
+    margin-right: 2em;
+    margin-left: 5.5em;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width:900px){
+  .App {
+    text-align: center;
+    font-style: normal;
+  font: large;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  width: max-content;
+  }
+  .App-container{
+       border-style: solid;
+      border: .5em black;
+      margin-top: 1em;
+      width: 90%;
+      padding-right: 2em;
+      padding-left: 2em;
+      margin: 0 auto;
+      margin-left: 2em;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      display:flex;
+      flex-direction: column;
+  }
+
+  .App-title{
+    margin-left: 0em;
+  }
+  .App-header {
+  margin-bottom: 15px;
+  background-color:black;
+  height: 50px;
+  color: hsl(0, 100%, 50%);
+  font: georgia;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  padding:10px 30px;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  transition: padding 300ms ease;
+opacity: .7;
+z-index: 99;
+  }
+
+  .container-form-create{
+    flex:1;
+    margin:0 auto;
+    margin-top: 8em;
+    width: max-content;
+    padding-left: 1em;
+  }
+  
+  .container-stickyNotes{
+    flex: 1;
+    margin:2em;
+    width:100%;
+  }
+
+
+
+  .stickyNotes-Container{
+    display: grid;
+    position: relative;
+    grid-template-columns: auto  auto;
+    grid-gap: 2em;
+    margin-top: 7.6em;
     margin-top: 2.5em;
    
   }
