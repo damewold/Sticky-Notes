@@ -5,15 +5,16 @@ font: large;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-weight: bold;
 padding-right: 3em;
+margin-left: 0em;
 }
 
 .App-container{
   display: flex;
   margin: 0 auto;
   margin-left:3em;
-  margin-right:2em;
+  margin-right:4em;
   margin-top: 4em;
-  padding-right: 1em;
+  padding-right: 4em;
   padding-left :1em;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -61,8 +62,9 @@ z-index: 99;
 .stickyNotes-Container{
   display: grid;
   position: relative;
-  grid-template-columns: auto auto auto;
-  grid-gap: 2em;
+  margin-left: 4em;
+  grid-template-columns: auto auto;
+  grid-gap: 3em;
   margin-top: 7.6em;
   width: 100%;
 }
@@ -113,7 +115,7 @@ button {
   padding: 1em;
   display: table-cell;
   vertical-align: middle;
-  height: 28.5em;
+  height: 32em;
   border: 1px solid green;
   border-radius:10px;
 width: 19em;
@@ -210,7 +212,7 @@ z-index: 99;
     padding: 1em;
     display: table-cell;
     vertical-align: middle;
-    height: 26em;
+    height: 28em;
     border: 1px solid green;
     border-radius:10px;
   width: 100%;
@@ -311,7 +313,7 @@ z-index: 99;
     padding: 1em;
     display: table-cell;
     vertical-align: middle;
-    height: 26em;
+    height: 28em;
     border: 1px solid green;
     border-radius:10px;
   width: 100%;
@@ -381,7 +383,7 @@ z-index: 99;
     flex:1;
     margin:10em 0em 0em 0em;
     width: max-content;
-    padding-left: 1em;
+    padding-left: 5.5em;
   }
   
   .container-stickyNotes{
@@ -404,7 +406,7 @@ z-index: 99;
     padding: 1em;
     display: table-cell;
     vertical-align: middle;
-    height: 26em;
+    height: 28em;
     border: 1px solid green;
     border-radius:10px;
   width: 100%;
@@ -450,15 +452,13 @@ vertical-align: middle;
 }
 
 textarea{
-  height: 10em;
+  height: 16em;
   margin-right: .7em;
   border-radius:10px;
   text-align:justify;
-  padding: .5em;
+  padding: .7em;
   background-color:white;
   border: 1px solid black;
-  
-
 }
 
 .task-textarea{
