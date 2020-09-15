@@ -457,17 +457,19 @@ textarea{
   padding: .5em;
   background-color:white;
   border: 1px solid black;
+  
 
 }
 
 .task-textarea{
-  height: 100px;
+  height: 10em;
   margin: .7em;
   border-radius:10px;
   text-align:justify;
   padding: .5em;
   background-color:white;
   border: 1px solid black;
+  width: 16.5em;
 }
 
 
