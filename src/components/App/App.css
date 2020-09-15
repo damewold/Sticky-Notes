@@ -8,7 +8,12 @@ font-weight: bold;
 
 .App-container{
   display: flex;
-  margin: 4em;
+  margin: 0 auto;
+  margin-left:3em;
+  margin-right:2em;
+  margin-top: 4em;
+  padding-right: 1em;
+  padding-left :1em;
   flex-direction: column;
   flex-wrap: nowrap;
   flex-flow: nowrap;
@@ -16,10 +21,11 @@ width:fit-content;
 }
 
 .container-form-create{
-  flex:1;
-  margin-top: 120px;
-  margin-right: 4em;
-  width: 100%;
+  margin: 0 auto;
+  margin-right: 2em;
+  margin-top: 7.6em;
+  width: max-content; 
+
 }
 
 .container-stickyNotes{
@@ -55,7 +61,7 @@ z-index: 99;
   display: grid;
   position: relative;
   grid-template-columns: auto auto auto;
-  grid-gap: 1em;
+  grid-gap: 2em;
   margin-top: 7.6em;
   width: 100%;
 }
@@ -102,13 +108,14 @@ button {
 .form-create{
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  margin:0 auto;
+  padding: 1em;
   display: table-cell;
   vertical-align: middle;
-  height: 28em;
+  height: 28.5em;
   border: 1px solid green;
   border-radius:10px;
-width:16.35em;
+width: 19em;
   clear: both;
 }
 
@@ -124,7 +131,7 @@ width:16.35em;
   width: 100%;
 }
 
-@media screen and (min-width: 600px) and (max-width:1051px){
+@media screen and (min-width: 600px) and (max-width:1151px){
   .App {
     text-align: center;
     font-style: normal;
@@ -142,7 +149,7 @@ width:16.35em;
       padding-right: 2em;
       padding-left: 2em;
       margin: 0 auto;
-     
+      margin-left: 2em;
       padding-top: 0px;
       padding-bottom: 0px;
       display:flex;
@@ -150,7 +157,7 @@ width:16.35em;
   }
 
   .App-title{
-    margin-left: 5.5em;
+    margin-left: 0em;
   }
   .App-header {
   margin-bottom: 15px;
@@ -168,14 +175,12 @@ width:16.35em;
   transition: padding 300ms ease;
 opacity: .7;
 z-index: 99;
-
-
-  
-  
   }
+
   .container-form-create{
     flex:1;
-    margin:10em auto auto auto;
+    margin:0 auto;
+    margin-top: 8em;
     width: max-content;
     padding-left: 1em;
   }
@@ -193,7 +198,7 @@ z-index: 99;
     position: relative;
     grid-template-columns: auto  auto auto;
     grid-gap: 2em;
-    margin-top: 7.6em;
+ 
     margin-top: 2.5em;
    
   }
@@ -208,7 +213,7 @@ z-index: 99;
     height: 26em;
     border: 1px solid green;
     border-radius:10px;
-  width: 17em;
+  width: 100%;
     clear: both;
 
   }
