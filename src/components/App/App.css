@@ -19,12 +19,13 @@ width:fit-content;
   flex:1;
   margin-top: 120px;
   margin-right: 4em;
+  width: 100%;
 }
 
 .container-stickyNotes{
   flex: 4;
   margin:2em;
-  
+  width: 100%;
 }
 .App-header {
   margin-bottom: 15px;
@@ -56,6 +57,7 @@ z-index: 99;
   grid-template-columns: auto auto auto;
   grid-gap: 1em;
   margin-top: 7.6em;
+  width: 100%;
 }
 
 .App-intro {
@@ -87,11 +89,13 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin:2em;
+
 }
 
 .form-Container{
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 
@@ -117,9 +121,10 @@ width:16.35em;
   border-radius:10px;
   width: 300px;
   background-color:#f2f2f2;
+  width: 100%;
 }
 
-@media screen and (min-width: 400px) and (max-width:900px){
+@media screen and (min-width: 700px) and (max-width:966px){
   .App {
     text-align: center;
     font-style: normal;
@@ -169,7 +174,7 @@ width:16.35em;
   }
   .container-form-create{
     flex:1;
-    margin:10em auto auto;
+    margin:10em auto auto auto;
     width: max-content;
     padding-left: 1em;
   }
@@ -180,13 +185,16 @@ width:16.35em;
     width:100%;
   }
 
+
+
   .stickyNotes-Container{
     display: grid;
     position: relative;
-    grid-template-columns: auto  auto;
-    grid-gap: 1em;
+    grid-template-columns: auto  auto auto;
+    grid-gap: 2em;
     margin-top: 7.6em;
     margin-top: 2.5em;
+   
   }
 
   .form-create{
@@ -205,8 +213,8 @@ width:16.35em;
   }
 
   .mui-panel{
-    width: 19em;
-    border-radius:10px
+    width: 100%;
+    border-radius:10em
   }
 
   .create-btn{
@@ -216,7 +224,19 @@ width:16.35em;
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (min-width: 400px) and (max-width:700px){
+
+  .container-form-create{
+
+    margin:10em auto auto;
+    width: max-content;
+    padding-left: 1em;
+  }
+
+
+
+}
+@media screen and (max-width: 600px){
   .App {
     text-align: center;
     font-style: normal;
@@ -225,6 +245,8 @@ width:16.35em;
   font-weight: bold;
   margin: 0 auto;
   width: max-content;
+  margin-left: 0%;
+  margin-right: 0%;
   }
   .App-container{
        border-style: solid;
@@ -234,11 +256,11 @@ width:16.35em;
       padding-right: 2em;
       padding-left: 2em;
       margin: 0 auto;
-     
       padding-top: 0px;
       padding-bottom: 0px;
       display:flex;
       flex-direction: column;
+
   }
   .App-header {
     margin-bottom: 10px;
@@ -290,13 +312,13 @@ width:16.35em;
     height: 26em;
     border: 1px solid green;
     border-radius:10px;
-  width: 17em;
+  width: 100%;
     clear: both;
 
   }
 
   .mui-panel{
-    width: 19em;
+    width: 100%;
     border-radius:10px
   }
 
@@ -328,7 +350,7 @@ vertical-align: middle;
 }
 
 .mui-panel{
-  width: 19em;
+  width: 100%;
   margin: 0 auto;
 }
 
