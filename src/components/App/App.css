@@ -4,6 +4,7 @@
 font: large;
 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-weight: bold;
+padding-right: 3em;
 }
 
 .App-container{
@@ -140,6 +141,7 @@ width: 19em;
   font-weight: bold;
   margin: 0;
   width: max-content;
+  padding-right: 3em;
   }
   .App-container{
        border-style: solid;
@@ -198,9 +200,7 @@ z-index: 99;
     position: relative;
     grid-template-columns: auto  auto auto;
     grid-gap: 2em;
-    margin-top: 7.6em;
     margin-top: 2.5em;
-   
   }
 
   .form-create{
@@ -238,10 +238,12 @@ z-index: 99;
   font-weight: bold;
   margin: 0;
   width: max-content;
+  padding-right: 3em;
   }
   .App-container{
        border-style: solid;
       border: .5em black;
+      margin: 0 auto;
       margin-top: 1em;
       width: 90%;
       padding-right: 2em;
@@ -252,6 +254,7 @@ z-index: 99;
       padding-bottom: 0px;
       display:flex;
       flex-direction: column;
+      
   }
 
   .App-title{
@@ -287,6 +290,7 @@ z-index: 99;
     flex: 1;
     margin:2em;
     width:100%;
+    padding-right: 2em;
   }
 
 
@@ -298,7 +302,6 @@ z-index: 99;
     grid-gap: 2em;
     margin-top: 7.6em;
     margin-top: 2.5em;
-   
   }
 
   .form-create{
@@ -339,6 +342,7 @@ z-index: 99;
   width: max-content;
   margin-left: 0%;
   margin-right: 0%;
+  padding-right: 3em;
   }
   .App-container{
        border-style: solid;
@@ -352,7 +356,6 @@ z-index: 99;
       padding-bottom: 0px;
       display:flex;
       flex-direction: column;
-
   }
   .App-header {
     margin-bottom: 10px;
