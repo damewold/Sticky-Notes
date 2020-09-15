@@ -124,7 +124,7 @@ width:16.35em;
   width: 100%;
 }
 
-@media screen and (min-width: 700px) and (max-width:966px){
+@media screen and (min-width: 600px) and (max-width:1051px){
   .App {
     text-align: center;
     font-style: normal;
@@ -153,22 +153,23 @@ width:16.35em;
     margin-left: 5.5em;
   }
   .App-header {
-    margin-bottom: 10px;
-    background-color:black;
-    margin: 0 auto;
-    color: hsl(0, 100%, 50%);
-    font: georgia;
-    text-align: initial;
-    position: fixed;
-    top: 0px;
-    display: flex;
-    padding-left: 7em;
-    align-items: center;
-    justify-content: space-between;
-    width:100%;
-    transition: padding 300ms ease;
-  opacity: .7;
-  z-index: 99;
+  margin-bottom: 15px;
+  background-color:black;
+  height: 50px;
+  color: hsl(0, 100%, 50%);
+  font: georgia;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  padding:10px 30px;
+  align-items: center;
+  justify-content: space-between;
+  width:100%;
+  transition: padding 300ms ease;
+opacity: .7;
+z-index: 99;
+
+
   
   
   }
@@ -224,18 +225,6 @@ width:16.35em;
 }
 
 
-@media screen and (min-width: 400px) and (max-width:700px){
-
-  .container-form-create{
-
-    margin:10em auto auto;
-    width: max-content;
-    padding-left: 1em;
-  }
-
-
-
-}
 @media screen and (max-width: 600px){
   .App {
     text-align: center;
