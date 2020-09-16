@@ -186,12 +186,12 @@ z-index: 99;
     margin:0 auto;
     margin-top: 8em;
     width: max-content;
-    padding-left: 1em;
+    padding-left: 6.2em;
   }
   
   .container-stickyNotes{
     flex: 1;
-    margin:2em;
+    margin-right:2em;
     width:100%;
   }
 
@@ -225,6 +225,9 @@ z-index: 99;
     border-radius:10em
   }
 
+  .mui-panel:hover{
+    transform: scale(1.5)
+  }
   .create-btn{
     margin-right: 2em;
     margin-left: 5.5em;
@@ -419,6 +422,10 @@ z-index: 99;
     border-radius:10px
   }
 
+  .mui-panel:hover{
+    transform: scale(1.5)
+  }
+
   .create-btn{
     margin-right: 2em;
     margin-left: 5.5em;
@@ -434,11 +441,15 @@ input,.id,.task,.status{
 display: inline-block;
 vertical-align:middle;
 width:50%;
-
 clear: both;
 justify-content: center;
 padding:3em;
 overflow-wrap: break-word;
+}
+
+input:hover{
+  transform: scale(1.05);
+  border: 1px solid blue;
 }
 
 h2{
@@ -451,6 +462,10 @@ vertical-align: middle;
   margin: 0 auto;
 }
 
+.mui-panel:hover{
+  transform: scale(1.05)
+}
+
 textarea{
   height: 16em;
   margin-right: .7em;
@@ -460,6 +475,11 @@ textarea{
   background-color:white;
   border: 1px solid black;
 }
+
+textarea:hover{
+  transform: scale(1.05);
+}
+
 
 .task-textarea{
   height: 10em;
