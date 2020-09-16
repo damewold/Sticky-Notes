@@ -113,13 +113,13 @@ button {
 
 .form-create{
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #ccc;
   margin:0 auto;
   padding: 1em;
   display: table-cell;
   vertical-align: middle;
   height: 32em;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   border-radius:10px;
 width: 19em;
   clear: both;
@@ -216,7 +216,7 @@ z-index: 99;
     display: table-cell;
     vertical-align: middle;
     height: 28em;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     border-radius:10px;
   width: 100%;
     clear: both;
@@ -320,7 +320,7 @@ z-index: 99;
     display: table-cell;
     vertical-align: middle;
     height: 28em;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     border-radius:10px;
   width: 100%;
     clear: both;
@@ -413,7 +413,7 @@ z-index: 99;
     display: table-cell;
     vertical-align: middle;
     height: 28em;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     border-radius:10px;
   width: 100%;
     clear: both;
