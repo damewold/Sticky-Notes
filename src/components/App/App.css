@@ -6,6 +6,8 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 font-weight: bold;
 padding-right: 3em;
 margin-left: 0em;
+background-color:#ccc;
+margin-bottom:3em;
 }
 
 .App-container{
@@ -67,6 +69,7 @@ z-index: 99;
   grid-gap: 3em;
   margin-top: 7.6em;
   width: 100%;
+  margin-bottom:3em;
 }
 
 .App-intro {
@@ -548,4 +551,12 @@ button{
 .create-btn{
   margin-right: 2em;
   margin-left: 5.5em;
+}
+
+footer{
+  background-color:#f2f2f2;
+  width:100%;
+  bottom: 0;
+  margin-top: 2em;
+  padding-top:3em;
 }
