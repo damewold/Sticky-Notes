@@ -492,6 +492,9 @@ textarea:hover{
   width: 16.5em;
 }
 
+.task-textarea:hover{
+  transform: scale(1.05);
+}
 
 
 input,textarea:hover,input,textarea:focus{
@@ -522,6 +525,11 @@ p{
   margin:.7em;
   border:1px solid black;
   border-radius:10px;
+}
+
+p:hover{
+  transform:scale(1.05);
+  border:1px solid red;
 }
 
 label{
