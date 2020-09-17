@@ -94,6 +94,8 @@ input[type=text], input[type=date], textarea{
   font:large;
   font-weight: bold;
   font-family:icon,Georgia, Times, 'Times New Roman', serif;
+  box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
+            inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
 }
 
 
@@ -109,11 +111,6 @@ button {
 
 }
 
-.form-Container{
-
-}
-
-
 .form-create{
   border-radius: 5px;
   background-color: #ccc;
@@ -121,11 +118,12 @@ button {
   padding: 1em;
   display: table-cell;
   vertical-align: middle;
-  height: 32em;
+  height: 38em;
   /* border: 1px solid green; */
   border-radius:10px;
-width: 19em;
+width: 32em;
   clear: both;
+  flex: 2;
 }
 
 .form-Container{
@@ -486,10 +484,12 @@ textarea{
   margin-right: .7em;
   border-radius:10px;
   text-align:justify;
-  padding: .7em;
+  padding: .8em;
   background-color:white;
   box-shadow: 0.05em 0.05em 0.05em 0.05em blue;
   /* border: 1px solid black; */
+  box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
+  inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
 }
 
 textarea:hover{
@@ -506,7 +506,9 @@ textarea:hover{
   background-color:white;
   border: none;
   width: 16.5em;
-  box-shadow: 0.05em 0.05em 0.05em 0.05em red;
+  /* box-shadow: 0.05em 0.05em 0.05em 0.05em red; */
+  box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
+  inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5);
 }
 
 .task-textarea:hover{
@@ -542,11 +544,13 @@ p{
   margin:.7em;
   border:none;
   border-radius:10px;
+  box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
+  inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5);
 }
 
 p:hover{
   transform:scale(1.05);
-  border:1px solid red;
+  border:1px solid black;
 }
 
 label{
