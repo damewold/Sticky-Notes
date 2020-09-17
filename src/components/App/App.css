@@ -49,7 +49,7 @@ width:fit-content;
   color: hsl(0, 100%, 50%);
   font: georgia;
   position: fixed;
-  top: 0px;
+  top: 0em;
   display: flex;
   /* padding:10px 30px; */
   align-items: center;
@@ -93,12 +93,10 @@ input[type=text], input[type=date], textarea{
   resize: vertical;
   font:large;
   font-weight: bold;
-  font-family:icon,Georgia, Times, 'Times New Roman', serif
+  font-family:icon,Georgia, Times, 'Times New Roman', serif;
 }
 
-input[type=date]:focus,input[type=date]:hover{
 
-}
 button {
   background-color:grey;
   color: white;
@@ -107,13 +105,12 @@ button {
   border-radius: 5px;
   cursor: pointer;
   margin:2em;
+  box-shadow: 0.05em 0.05em 0.05em 0.05em grey;
 
 }
 
 .form-Container{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+
 }
 
 
@@ -136,11 +133,11 @@ width: 19em;
   padding:1em;
   vertical-align: middle;
   height: 50px;
-  border: 1px solid red;
   border-radius:10px;
   width: 300px;
   background-color:#f2f2f2;
   width: 100%;
+  box-shadow: 0.05em 0.05em 0.05em 0.05em grey;
 }
 
 @media screen and (min-width: 900px) and (max-width:1151px){
@@ -171,6 +168,9 @@ width: 19em;
 
   .App-title{
     margin-left: 0em;
+    font-size: 4em;
+    width: 100%;
+    font-family: monospace;
   }
   .App-header {
   margin-bottom: 15px;
@@ -376,7 +376,6 @@ z-index: 99;
     background-color:black;
     margin: 0 auto;
     color: hsl(0, 100%, 50%);
-    font: georgia;
     text-align: initial;
     position: fixed;
     top: 0px;
@@ -388,8 +387,12 @@ z-index: 99;
     transition: padding 300ms ease;
   opacity: .7;
   z-index: 99;
-  
-  
+  }
+
+  .App-title {
+    font-size: 3em;
+    width: 100%;
+    font-family: monospace;
   }
   .container-form-create{
     flex:1;
@@ -413,7 +416,7 @@ z-index: 99;
 
   .form-create{
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color:#ccc;
     margin:0 auto;
     padding: 1em;
     display: table-cell;
@@ -423,6 +426,7 @@ z-index: 99;
     border-radius:10px;
   width: 100%;
     clear: both;
+
 
   }
 
@@ -454,6 +458,7 @@ clear: both;
 justify-content: center;
 padding:3em;
 overflow-wrap: break-word;
+box-shadow: 0.05em 0.05em 0.05em 0.05em blue;
 }
 
 input:hover{
@@ -468,7 +473,8 @@ vertical-align: middle;
 
 .mui-panel{
   width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  
 }
 
 .mui-panel:hover{
@@ -482,7 +488,8 @@ textarea{
   text-align:justify;
   padding: .7em;
   background-color:white;
-  border: 1px solid black;
+  box-shadow: 0.05em 0.05em 0.05em 0.05em blue;
+  /* border: 1px solid black; */
 }
 
 textarea:hover{
@@ -497,8 +504,9 @@ textarea:hover{
   text-align:justify;
   padding: .5em;
   background-color:white;
-  border: 1px solid black;
+  border: none;
   width: 16.5em;
+  box-shadow: 0.05em 0.05em 0.05em 0.05em red;
 }
 
 .task-textarea:hover{
@@ -532,7 +540,7 @@ p{
   background-color:white;
   padding:.7em;
   margin:.7em;
-  border:1px solid black;
+  border:none;
   border-radius:10px;
 }
 
@@ -544,25 +552,41 @@ p:hover{
 label{
   font: 5em;
 }
+
 .notes{
   text-align:left;
   margin: 0 auto;
+  padding: 1em;
 }
 
 button{
-  margin-top: 0.4em;
-  margin-bottom: 0;
+  /* margin-top: 0.4em;
+  margin-bottom: 0; */
+  background-color:black;
+  font-family: monospace,icon, Times,georgia, serif,Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .create-btn{
+  margin-top: 0.4em;
+  margin-bottom: 0;
+  background-color:black;
+  font-family: monospace,icon, Times,georgia, serif,Arial, Helvetica, sans-serif;
+  font-weight: bolder;
   margin-right: 2em;
   margin-left: 5.5em;
 }
 
-footer{
-  background-color:#f2f2f2;
+/* footer{
+  margin-bottom: 0;
+  background-color:black;
+  height: 5em;
+  position: fixed;
+  bottom: 0em;
+  display: flex;
+  padding:10px 30px;
+  align-items: center;
+  justify-content: space-between;
   width:100%;
-  bottom: 0;
-  margin-top: 2em;
-  padding-top:3em;
-}
+  opacity: 0.7;
+} */

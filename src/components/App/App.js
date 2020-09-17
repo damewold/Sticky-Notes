@@ -66,7 +66,7 @@ class App extends Component {
       <div className="App">
          <header className="App-header">
                 <h1 className="App-title">MY STICKY NOTES</h1>
-              </header>
+              </header>   
         <div className="App-container">
               <div className='container-form-create'>
               <form className="form-create">
@@ -94,9 +94,7 @@ class App extends Component {
            </div>
            </div>
             </div>
-             <footer>
-          
-             </footer>
+     
              </>
           
                 
