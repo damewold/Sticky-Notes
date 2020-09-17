@@ -7,7 +7,7 @@ body{
   text-align: center;
   font-style: normal;
 font: large;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 font-weight: bold;
 padding-right: 3em;
 margin-left: 0em;
@@ -92,8 +92,7 @@ input[type=text], input[type=date], textarea{
   margin-bottom: 16px;
   resize: vertical;
   font:large;
-  font-weight: bold;
-  font-family:icon,Georgia, Times, 'Times New Roman', serif;
+  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
   box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
             inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
 }
@@ -108,7 +107,8 @@ button {
   cursor: pointer;
   margin:2em;
   box-shadow: 0.05em 0.05em 0.05em 0.05em grey;
-
+  font:large;
+  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
 .form-create{
@@ -124,6 +124,8 @@ button {
 width: 32em;
   clear: both;
   flex: 2;
+  font:large;
+  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
 .form-Container{
@@ -136,6 +138,8 @@ width: 32em;
   background-color:#f2f2f2;
   width: 100%;
   box-shadow: 0.05em 0.05em 0.05em 0.05em grey;
+  font:large;
+  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
 @media screen and (min-width: 900px) and (max-width:1151px){
@@ -448,7 +452,7 @@ z-index: 99;
 
 
 
-input,.id,.task,.status{
+input,.task,.status{
 display: inline-block;
 vertical-align:middle;
 width:50%;
@@ -467,6 +471,8 @@ input:hover{
 h2{
   display: inline-block;
 vertical-align: middle;
+font:large;
+font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
 .mui-panel{
@@ -490,6 +496,8 @@ textarea{
   /* border: 1px solid black; */
   box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
   inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
+  font:large;
+  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
 textarea:hover{
@@ -509,6 +517,8 @@ textarea:hover{
   /* box-shadow: 0.05em 0.05em 0.05em 0.05em red; */
   box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
   inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5);
+  font:large;
+  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
 .task-textarea:hover{
@@ -526,13 +536,16 @@ button:hover, button:focus{
   color:red;
   font: large ;
   font-weight: bold;
+  font:large;
+  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 .task{
   padding-right:2em;
   padding-left:2em;
 }
 .id{
-  padding-top: 2em;
+  width:0.8em;
+  height:0.8em ;
 }
 
 p{
@@ -546,11 +559,13 @@ p{
   border-radius:10px;
   box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
   inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5);
+  font:large;
+  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
 p:hover{
   transform:scale(1.05);
-  border:1px solid black;
+  border:1px solid blue;
 }
 
 label{

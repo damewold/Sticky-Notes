@@ -93,7 +93,7 @@ class Tasks extends Component {
          }else{
            itemToRender =
           <form className='form-Container' key={task.id}>
-                           <div className='notes'><label>TASK ID</label><p>{task.id}</p>
+                           <div className='notes'><label>TASK ID</label><p className="id">{task.id}</p>
                               <label>TASK</label><p  className='task-textarea' >{task.task} </p>
                              <label>DUE DATE</label><p className='date' >{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
                              <label>STATUS</label><p>{task.status}</p>
