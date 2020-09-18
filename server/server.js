@@ -7,7 +7,12 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json()); // needed for axios requests
 app.use(express.static('build'));
 
-
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
+app.get('*', (request, response) => {
+	response.sendFile(path.join(toDo, 'client/build', 'index.html'));
+});
 /**------Express routes------------ */
 const router = require('./routes/taskRouter');
 
