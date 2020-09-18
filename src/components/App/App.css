@@ -1,5 +1,5 @@
 body{
-  background-color:#ccc;
+  background-color: #6699cc;
   margin: 0;
   padding: 0;
 }
@@ -11,7 +11,7 @@ font: large;
 font-weight: bold;
 padding-right: 3em;
 margin-left: 0em;
-background-color:#ccc;
+background-color: #6699cc;
 margin-bottom:3em;
 }
 
@@ -34,6 +34,7 @@ width:fit-content;
   margin-right: 2em;
   margin-top: 7.6em;
   width: max-content; 
+border-right: solid 1px black;
 
 }
 
@@ -76,6 +77,7 @@ z-index: 99;
   margin-top: 7.6em;
   width: 100%;
   margin-bottom:3em;
+  z-index: 2em;
 }
 
 .App-intro {
@@ -91,7 +93,7 @@ input[type=text], input[type=date], textarea{
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  font:large;
+  font:4em;
   font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
   box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
             inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
@@ -113,7 +115,7 @@ button {
 
 .form-create{
   border-radius: 5px;
-  background-color: #ccc;
+  background-color: #6699cc;
   margin:0 auto;
   padding: 1em;
   display: table-cell;
@@ -135,11 +137,12 @@ width: 32em;
   height: 50px;
   border-radius:10px;
   width: 300px;
-  background-color:#f2f2f2;
+  background-color: #d9e9f8;
   width: 100%;
   box-shadow: 0.05em 0.05em 0.05em 0.05em grey;
   font:large;
   font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
+
 }
 
 @media screen and (min-width: 900px) and (max-width:1151px){
@@ -460,12 +463,12 @@ clear: both;
 justify-content: center;
 padding:3em;
 overflow-wrap: break-word;
-box-shadow: 0.05em 0.05em 0.05em 0.05em blue;
+box-shadow: 0.05em 0.05em 0.05em 0.05em black;
 }
 
 input:hover{
   transform: scale(1.05);
-  border: 1px solid blue;
+  border: 1px solid red;
 }
 
 h2{
@@ -492,7 +495,7 @@ textarea{
   text-align:justify;
   padding: .8em;
   background-color:white;
-  box-shadow: 0.05em 0.05em 0.05em 0.05em blue;
+  box-shadow: 0.05em 0.05em 0.05em 0.05em;
   /* border: 1px solid black; */
   box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
   inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
@@ -513,16 +516,17 @@ textarea:hover{
   padding: .5em;
   background-color:white;
   border: none;
-  width: 16.5em;
+  /* width: 16.5em; */
   /* box-shadow: 0.05em 0.05em 0.05em 0.05em red; */
-  box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
-  inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5);
+  /* box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
+  inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5); */
   font:large;
   font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
 .task-textarea:hover{
   transform: scale(1.05);
+  border: 1px solid blue;
 }
 
 
@@ -546,6 +550,9 @@ button:hover, button:focus{
 .id{
   width:0.8em;
   height:0.8em ;
+  font-size: 2em;
+  box-shadow: none;
+  border: 1px solid black;
 }
 
 p{
@@ -557,16 +564,13 @@ p{
   margin:.7em;
   border:none;
   border-radius:10px;
-  box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
-  inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5);
+  /* box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
+  inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5); */
   font:large;
   font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
-p:hover{
-  transform:scale(1.05);
-  border:1px solid blue;
-}
+
 
 label{
   font: 5em;
@@ -579,21 +583,23 @@ label{
 }
 
 button{
-  /* margin-top: 0.4em;
-  margin-bottom: 0; */
   background-color:black;
   font-family: monospace,icon, Times,georgia, serif,Arial, Helvetica, sans-serif;
   font-weight: bold;
+  margin-left: 5.5em;
+  margin-right: 2em;
 }
 
 .create-btn{
   margin-top: 0.4em;
-  margin-bottom: 0;
+  margin-bottom: 0.4em;
   background-color:black;
   font-family: monospace,icon, Times,georgia, serif,Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  margin-right: 2em;
-  margin-left: 5.5em;
+ padding:1em;
+ border-radius: 0.5em;
+ margin-left:6.5em;
+ box-shadow: 0.5em 0.5em 0.8em rgba(0,0,0,0.5),
 }
 
 /* footer{
