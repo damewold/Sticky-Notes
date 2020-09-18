@@ -87,8 +87,8 @@ class Tasks extends Component {
                     value={this.state.status}
                     onChange={(event) => {this.handleInputChange(event,'status')}}
              />
-                     <div className='btn-container'><Button  className='btn-1' onClick={this.showStatus}>Back</Button>
-                               <Button className='btn-2' >submit</Button></div>  </div>   
+                     <div className='btn-container'><Button  className='btn-12' onClick={this.showStatus}>BACK</Button>
+                               <Button className='btn-23' >SUBMIT</Button></div>  </div>   
          </Form>
          }else{
            itemToRender =
@@ -97,8 +97,8 @@ class Tasks extends Component {
                               <label>TASK</label><p  className='task-textarea' >{task.task} </p>
                              <label>DUE DATE</label><p className='date' >{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
                              <label>STATUS</label><p>{task.status}</p>
-                             <div ><Button className='btn-1'  onClick={this.deleteTaskItem}>Delete</Button>
-                             <Button className='btn-2' onClick={this.showStatus}>Edit</Button></div></div>   
+                             <div ><Button className='btn-1'  onClick={this.deleteTaskItem}>DELETE</Button>
+                             <Button className='btn-2' onClick={this.showStatus}>EDIT</Button></div></div>   
          </form>
          }
           return (

@@ -145,6 +145,182 @@ text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); 
 }
 
+.create{
+  align-items:center ;
+}
+
+
+
+input,.task,textarea,.status{
+display: inline-block;
+vertical-align:middle;
+width:100%;
+clear: both;
+justify-content: center;
+padding:3em;
+overflow-wrap: break-word;
+box-shadow: 0.05em 0.05em 0.05em 0.05em black;
+font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
+font-weight: bold;
+font-size: 1.25em;
+
+}
+
+input:hover{
+  transform: scale(1.05);
+  border: 2px solid blue;
+}
+
+h2{
+  display: inline-block;
+vertical-align: middle;
+font-size: 1.75em;
+font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.mui-panel{
+  width: 100%;
+  /* margin: 0 auto; */
+  
+}
+
+.mui-panel:hover{
+  transform: scale(1.05)
+}
+
+textarea{
+  height: 13em;
+  margin-right: .7em;
+  border-radius:10px;
+  text-align:justify;
+  padding: 1.8em;
+  background-color:white;
+  border: 1px solid black;
+  box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
+  inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
+  font-size: 1em;
+  font-weight: bold;
+  font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
+font-weight: bold;
+display: inline-block;
+
+
+}
+
+textarea:hover{
+  transform: scale(1.05);
+}
+
+
+.task-textarea{
+  height: 10em;
+  margin: .7em;
+  border-radius:10px;
+  text-align:justify;
+  padding: 1.7em;
+  background-color:white;
+  border: 1px solid black;
+  width: 20em;
+  font:large;
+  font-family: icon,Georgia, Times, 'Times New Roman', serif;
+  font-weight: lighter;
+  justify-content:center;
+  text-align: left;
+  word-wrap: wrap;
+
+}
+
+.task-textarea:hover{
+  transform: scale(1.1em);
+  /* border: 1px solid blue; */
+}
+
+
+input,textarea:hover,input,textarea:focus{
+  border: 1px solid blue;
+}
+
+button:hover, button:focus{
+  border: 1px solid blue;
+  background-color:white;
+  color:red;
+  font: large ;
+  font-weight: bold;
+  font:large;
+  font-family:icon,monospace, Georgia, Times, 'Times New Roman', serif;
+}
+.task{
+  padding-right:2em;
+  padding-left:2em;
+}
+.id{
+  width:0.8em;
+  height:0.8em ;
+  font-size: 2em;
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+p{
+  font: large;
+  font-weight: bold;
+  font-family: times, monospace, georgia, serif;
+  background-color:white;
+  padding:.7em;
+  margin:.7em;
+  border:none;
+  border-radius:10px;
+  font-size: 1.05em;
+  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); 
+text-overflow: center;
+}
+
+
+label{
+  font-size: 1.25em;
+}
+
+
+.notes{
+  text-align:left;
+  margin: 0 auto;
+}
+
+button{
+  background-color:black;
+  font-family: monospace,icon, Times,georgia, serif,Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  box-shadow: 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
+  margin-bottom: 0em;
+}
+
+.btn-container{
+  margin-left:2em;
+}
+.btn-1,.btn-12{
+  margin-right:5em
+  }
+  
+  .btn-2,.btn-23{
+  margin-left:5.5em;
+  }
+.create-btn{
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+  background-color:black;
+  font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 1em;
+ padding:1em;
+ border-radius: 0.5em;
+ margin-left:4.5em;
+ box-shadow: 0.5em 0.5em 0.8em rgba(0,0,0,0.5),
+}
+
+
 @media screen and (min-width: 900px) and (max-width:1151px){
   .App {
     text-align: center;
@@ -405,7 +581,7 @@ z-index: 99;
     flex:1;
     margin:10em 0em 0em 0em;
     width: max-content;
-    padding-left: 5.5em;
+    padding-left: 2.5em;
     border-right: none;
   }
   
@@ -430,7 +606,6 @@ z-index: 99;
     display: table-cell;
     vertical-align: middle;
     height: 28em;
-    /* border: 1px solid green; */
     border-radius:10px;
   width: 100%;
     clear: both;
@@ -448,183 +623,35 @@ z-index: 99;
   }
 
   .create-btn{
-    margin-right: 2em;
-    margin-left: 5.5em;
+margin: 2em 6.5em;
+    background-color:black;
+    font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 1em;
+   padding:1em;
+   border-radius: 0.5em;
+   box-shadow: 0.5em 0.5em 0.8em rgba(0,0,0,0.5),
   }
-}
-.create{
-  align-items:center ;
-}
 
-
-
-input,.task,textarea,.status{
-display: inline-block;
-vertical-align:middle;
-width:100%;
-clear: both;
-justify-content: center;
-padding:3em;
-overflow-wrap: break-word;
-box-shadow: 0.05em 0.05em 0.05em 0.05em black;
-font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
-font-weight: bold;
-font-size: 1.25em;
-
-}
-
-input:hover{
-  transform: scale(1.05);
-  border: 2px solid blue;
-}
-
-h2{
-  display: inline-block;
-vertical-align: middle;
-font-size: 1.75em;
-font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
-
-}
-
-.mui-panel{
-  width: 100%;
-  /* margin: 0 auto; */
-  
-}
-
-.mui-panel:hover{
-  transform: scale(1.05)
-}
-
-textarea{
-  height: 13em;
-  margin-right: .7em;
-  border-radius:10px;
-  text-align:justify;
-  padding: 1.8em;
-  background-color:white;
-  border: 1px solid black;
-  box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
-  inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
-  font-size: 1em;
-  font-weight: bold;
-  font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
-font-weight: bold;
-display: inline-block;
-
-
-}
-
-textarea:hover{
-  transform: scale(1.05);
-}
-
-
-.task-textarea{
-  height: 10em;
-  margin: .7em;
-  border-radius:10px;
-  text-align:justify;
-  padding: 1.7em;
-  background-color:white;
-  border: 1px solid black;
-  width: 20em;
-  font:large;
-  font-family: icon,Georgia, Times, 'Times New Roman', serif;
-  font-weight: lighter;
-  justify-content:center;
-  text-align: left;
-  word-wrap: wrap;
-
-}
-
-.task-textarea:hover{
-  transform: scale(1.1em);
-  /* border: 1px solid blue; */
-}
-
-
-input,textarea:hover,input,textarea:focus{
-  border: 1px solid blue;
-}
-
-button:hover, button:focus{
-  border: 1px solid blue;
-  background-color:white;
-  color:red;
-  font: large ;
-  font-weight: bold;
-  font:large;
-  font-family:icon,monospace, Georgia, Times, 'Times New Roman', serif;
-}
-.task{
-  padding-right:2em;
-  padding-left:2em;
-}
-.id{
-  width:0.8em;
-  height:0.8em ;
-  font-size: 2em;
-  box-shadow: none;
-  border: 1px solid black;
-}
-
-p{
-  font: large;
-  font-weight: bold;
-  font-family: times, monospace, georgia, serif;
-  background-color:white;
-  padding:.7em;
-  margin:.7em;
-  border:none;
-  border-radius:10px;
-  font-size: 1.05em;
-  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
-  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); 
-text-overflow: center;
-}
-
-
-label{
-  font-size: 1.25em;
-}
-
-
-.notes{
-  text-align:left;
-  margin: 0 auto;
-}
-
-button{
-  background-color:black;
-  font-family: monospace,icon, Times,georgia, serif,Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 1em;
-  box-shadow: 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
-  margin-bottom: 0em;
-}
-
-.btn-container{
-  margin-left:2em;
-}
-.btn-1{
-  margin-right:5em
+  .btn-container{
+    margin-left:2em;
   }
-  
-  .btn-2{
-  margin-left:5.5em;
-  }
-.create-btn{
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
-  background-color:black;
-  font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bold;
-  font-size: 1em;
- padding:1em;
- border-radius: 0.5em;
- margin-left:4.5em;
- box-shadow: 0.5em 0.5em 0.8em rgba(0,0,0,0.5),
+  .btn-1{
+    margin-right:5em
+    }
+    
+    .btn-2{
+    margin-left:5.5em;
+    }
+
+    .btn-12{
+      margin-right:2em;
+      margin-left: 1.5em;
+      }
+      
+      .btn-23{
+      margin-left:3.5em;
+      }
 }
 
 
