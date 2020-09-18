@@ -41,7 +41,7 @@ border-right: solid 1px black;
 .container-stickyNotes{
   flex: 4;
   margin:2em;
-  width: 100%;
+  width: 80%;
 }
 .App-header {
   margin-bottom: 15px;
@@ -59,6 +59,7 @@ border-right: solid 1px black;
   transition: padding 300ms ease;
 opacity: .7;
 z-index: 99;
+text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); 
 
 }
 
@@ -71,13 +72,12 @@ z-index: 99;
 .stickyNotes-Container{
   display: grid;
   position: relative;
-  margin-left: 4em;
+  margin-left: 1em;
   grid-template-columns: auto auto;
   grid-gap: 3em;
   margin-top: 7.6em;
-  width: 100%;
+  width: 80%;
   margin-bottom:3em;
-  z-index: 2em;
 }
 
 .App-intro {
@@ -93,7 +93,7 @@ input[type=text], input[type=date], textarea{
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
-  font:4em;
+  font-size:1em;
   font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
   box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
             inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
@@ -117,32 +117,32 @@ button {
   border-radius: 5px;
   background-color: #6699cc;
   margin:0 auto;
+  padding-left: 5em;
   padding: 1em;
   display: table-cell;
   vertical-align: middle;
-  height: 38em;
-  /* border: 1px solid green; */
-  border-radius:10px;
-width: 32em;
+  height: 15em;
+width: 100%;
   clear: both;
   flex: 2;
-  font:large;
   font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
+color: white;
+text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); 
+
 }
 
 .form-Container{
   display: table-cell;
   padding:1em;
   vertical-align: middle;
-  height: 50px;
+
   border-radius:10px;
-  width: 300px;
   background-color: #d9e9f8;
   width: 100%;
   box-shadow: 0.05em 0.05em 0.05em 0.05em grey;
   font:large;
   font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
-
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); 
 }
 
 @media screen and (min-width: 900px) and (max-width:1151px){
@@ -201,6 +201,7 @@ z-index: 99;
     margin-top: 8em;
     width: max-content;
     padding-left: 6.2em;
+    border-right: none;
   }
   
   .container-stickyNotes{
@@ -221,7 +222,7 @@ z-index: 99;
 
   .form-create{
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color:  #6699cc;
     margin:0 auto;
     padding: 1em;
     display: table-cell;
@@ -303,6 +304,7 @@ z-index: 99;
     margin-top: 8em;
     width: max-content;
     padding-left: 1em;
+    border-right: none;
   }
   
   .container-stickyNotes{
@@ -325,7 +327,7 @@ z-index: 99;
 
   .form-create{
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color:  #6699cc;
     margin:0 auto;
     padding: 1em;
     display: table-cell;
@@ -404,6 +406,7 @@ z-index: 99;
     margin:10em 0em 0em 0em;
     width: max-content;
     padding-left: 5.5em;
+    border-right: none;
   }
   
   .container-stickyNotes{
@@ -421,7 +424,7 @@ z-index: 99;
 
   .form-create{
     border-radius: 5px;
-    background-color:#ccc;
+    background-color: #6699cc;
     margin:0 auto;
     padding: 1em;
     display: table-cell;
@@ -455,27 +458,32 @@ z-index: 99;
 
 
 
-input,.task,.status{
+input,.task,textarea,.status{
 display: inline-block;
 vertical-align:middle;
-width:50%;
+width:100%;
 clear: both;
 justify-content: center;
 padding:3em;
 overflow-wrap: break-word;
 box-shadow: 0.05em 0.05em 0.05em 0.05em black;
+font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
+font-weight: bold;
+font-size: 1.25em;
+
 }
 
 input:hover{
   transform: scale(1.05);
-  border: 1px solid red;
+  border: 2px solid blue;
 }
 
 h2{
   display: inline-block;
 vertical-align: middle;
-font:large;
-font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
+font-size: 1.75em;
+font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 .mui-panel{
@@ -489,18 +497,22 @@ font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
 }
 
 textarea{
-  height: 16em;
+  height: 13em;
   margin-right: .7em;
   border-radius:10px;
   text-align:justify;
-  padding: .8em;
+  padding: 1.8em;
   background-color:white;
-  box-shadow: 0.05em 0.05em 0.05em 0.05em;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
   inset 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
-  font:large;
-  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
+font-weight: bold;
+display: inline-block;
+
+
 }
 
 textarea:hover{
@@ -513,20 +525,22 @@ textarea:hover{
   margin: .7em;
   border-radius:10px;
   text-align:justify;
-  padding: .5em;
+  padding: 1.7em;
   background-color:white;
-  border: none;
-  /* width: 16.5em; */
-  /* box-shadow: 0.05em 0.05em 0.05em 0.05em red; */
-  /* box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
-  inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5); */
+  border: 1px solid black;
+  width: 20em;
   font:large;
-  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
+  font-family: icon,Georgia, Times, 'Times New Roman', serif;
+  font-weight: lighter;
+  justify-content:center;
+  text-align: left;
+  word-wrap: wrap;
+
 }
 
 .task-textarea:hover{
-  transform: scale(1.05);
-  border: 1px solid blue;
+  transform: scale(1.1em);
+  /* border: 1px solid blue; */
 }
 
 
@@ -541,7 +555,7 @@ button:hover, button:focus{
   font: large ;
   font-weight: bold;
   font:large;
-  font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
+  font-family:icon,monospace, Georgia, Times, 'Times New Roman', serif;
 }
 .task{
   padding-right:2em;
@@ -564,43 +578,55 @@ p{
   margin:.7em;
   border:none;
   border-radius:10px;
-  /* box-shadow: 0.2em 0.2em 0.5em rgba(0,0,0,0.5),
-  inset 0.3em 0.3em 0.5em rgba(0,0,0,0.5); */
-  font:large;
+  font-size: 1.05em;
   font-family:monospace, icon,Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); 
+text-overflow: center;
 }
-
 
 
 label{
-  font: 5em;
+  font-size: 1.25em;
 }
+
 
 .notes{
   text-align:left;
   margin: 0 auto;
-  padding: 1em;
 }
 
 button{
   background-color:black;
   font-family: monospace,icon, Times,georgia, serif,Arial, Helvetica, sans-serif;
   font-weight: bold;
-  margin-left: 5.5em;
-  margin-right: 2em;
+  font-size: 1em;
+  box-shadow: 0.5em 0.5em 0.8em rgba(0,0,0,0.5);
+  margin-bottom: 0em;
 }
 
+.btn-container{
+  margin-left:2em;
+}
+.btn-1{
+  margin-right:5em
+  }
+  
+  .btn-2{
+  margin-left:5.5em;
+  }
 .create-btn{
   margin-top: 0.4em;
   margin-bottom: 0.4em;
   background-color:black;
-  font-family: monospace,icon, Times,georgia, serif,Arial, Helvetica, sans-serif;
-  font-weight: bolder;
+  font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
+  font-weight: bold;
+  font-size: 1em;
  padding:1em;
  border-radius: 0.5em;
- margin-left:6.5em;
+ margin-left:4.5em;
  box-shadow: 0.5em 0.5em 0.8em rgba(0,0,0,0.5),
 }
+
 
 /* footer{
   margin-bottom: 0;
