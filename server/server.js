@@ -6,14 +6,14 @@ const PORT = process.env.PORT || 5000;
 
 /** ---------- MIDDLEWARE ---------- **/
 app.use(bodyParser.json()); // needed for axios requests
-app.use(express.static('build'));
+// app.use(express.static('build'));
 
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-// if (process.env.NODE_ENV === 'production') {
-// 	app.use(express.static('client/build'));
-// }
+if (process.env.NODE_ENV === 'production') {
+	app.use(express.static('client/build'));
+}
 
 app.get('*', (request, response) => {
 	response.sendFile(path.join(__dirname+'client/build/index.html'));
