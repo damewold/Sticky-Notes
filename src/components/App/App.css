@@ -413,12 +413,11 @@ z-index: 99;
 
   .mui-panel{
     width: 100%;
-    border-radius:10em
+    border-radius:10em;
+    margin-bottom: 2em;
+    margin-top:2em;
   }
 
-  .mui-panel:hover{
-    transform: scale(1.5)
-  }
   .create-btn{
     margin-right: 2em;
     margin-left: 5.5em;
@@ -518,7 +517,9 @@ z-index: 99;
 
   .mui-panel{
     width: 100%;
-    border-radius:10em
+    border-radius:10em;
+    margin-bottom: 2em;
+    margin-top:2em;
   }
 
   .create-btn{
@@ -615,12 +616,11 @@ z-index: 99;
 
   .mui-panel{
     width: 100%;
-    border-radius:10px
+    border-radius:10px;
+    margin-bottom: 2em;
+    margin-top:2em;
   }
 
-  .mui-panel:hover{
-    transform: scale(1.5)
-  }
 
   .create-btn{
 margin: 2em 6.5em;
@@ -655,16 +655,3 @@ margin: 2em 6.5em;
 }
 
 
-/* footer{
-  margin-bottom: 0;
-  background-color:black;
-  height: 5em;
-  position: fixed;
-  bottom: 0em;
-  display: flex;
-  padding:10px 30px;
-  align-items: center;
-  justify-content: space-between;
-  width:100%;
-  opacity: 0.7;
-} */
