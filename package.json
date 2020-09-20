@@ -30,6 +30,10 @@
     "node-fetch": "^2.6.0",
     "nodemon": "^1.19.4"
   },
+  
+  "engines": {
+    "node": "10.16.0"
+  },
   "scripts": {
     "heroku-postbuild": "npm run build",
     "start": " node server/server.js",
