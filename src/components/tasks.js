@@ -61,7 +61,7 @@ class Tasks extends Component {
         let itemToRender;
         const task = this.props.task
          if(this.state.showStatus){
-           itemToRender = <Form className='form' onSubmit={this.editTaskItem}>
+           itemToRender = <form className='form-task' onSubmit={this.editTaskItem}>
           <div className='notes'><label>TASK ID</label><Input  
                    type="text"
                    name="id"
@@ -87,13 +87,13 @@ class Tasks extends Component {
                     value={this.state.status}
                     onChange={(event) => {this.handleInputChange(event,'status')}}
              />
-                     <div className='btn-container'><Button  className='btn-12' onClick={this.showStatus}>BACK</Button>
-                               <Button className='btn-23' >SUBMIT</Button></div>  </div>   
-         </Form>
+         <div className='btn-container' ><Button  className='btn-12' onClick={this.showStatus}>BACK</Button><Button className='btn-23' >SUBMIT</Button></div>
+         </div>  
+         </form>
          }else{
            itemToRender =
           <form className='form-Container' key={task.id}>
-                           <div className='notes'><label>TASK ID</label><p className="id">{task.id}</p>
+                           <div ><label>TASK ID</label><p className="id">{task.id}</p>
                               <label>TASK</label><p  className='task-textarea' >{task.task} </p>
                              <label>DUE DATE</label><p className='date' >{moment(task.dueDate).format('MMM-Do-YYYY')}</p>
                              <label>STATUS</label><p>{task.status}</p>

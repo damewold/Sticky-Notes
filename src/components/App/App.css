@@ -33,8 +33,9 @@ width:fit-content;
   margin: 0 auto;
   margin-right: 2em;
   margin-top: 7.6em;
-  width: max-content; 
+  width: 100%; 
 border-right: solid 1px black;
+padding-right: 2em;
 
 }
 
@@ -133,9 +134,8 @@ text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
 
 .form-Container{
   display: table-cell;
-  padding:1em;
+  padding:1.5em;
   vertical-align: middle;
-
   border-radius:10px;
   background-color: #d9e9f8;
   width: 100%;
@@ -181,7 +181,7 @@ font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
 
 .mui-panel{
   width: 100%;
-  /* margin: 0 auto; */
+
   
 }
 
@@ -189,6 +189,10 @@ font-family: icon,monospace, Georgia, Times, 'Times New Roman', serif;
   transform: scale(1.05)
 }
 
+.add-task{
+  padding-right: 2em;
+  width:100%;
+}
 textarea{
   height: 13em;
   margin-right: .7em;
@@ -285,7 +289,16 @@ label{
 
 .notes{
   text-align:left;
-  margin: 0 auto;
+  margin-left: 2em;
+  margin-right: 3em;
+  padding-right: 2em;
+    padding-right: 2em;
+ display: inline-block;
+ width: 100%;
+}
+
+.form-task{
+  margin-right: 3em;
 }
 
 button{
@@ -297,9 +310,7 @@ button{
   margin-bottom: 0em;
 }
 
-.btn-container{
-  margin-left:2em;
-}
+
 .btn-1{
   margin-right:5em
   }
@@ -309,12 +320,14 @@ button{
   }
 
   .btn-12{
-    margin-right:2em;
-    margin-left: 1.5em;
+   margin: 0em;
+   margin-top: 2em;
     }
     
     .btn-23{
-    margin-left:3.5em;
+      margin: 0em;
+ margin-top: 2em;
+ margin-left: 6em;
     }
 .create-btn{
   margin-top: 0.4em;
@@ -392,10 +405,13 @@ z-index: 99;
   .container-stickyNotes{
     flex: 1;
     margin-right:2em;
+    margin-left:2em;
     width:100%;
   }
 
-
+  .form-task{
+    margin-right: 3em;
+  }
 
   .stickyNotes-Container{
     display: grid;
