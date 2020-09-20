@@ -300,13 +300,22 @@ button{
 .btn-container{
   margin-left:2em;
 }
-.btn-1,.btn-12{
+.btn-1{
   margin-right:5em
   }
   
-  .btn-2,.btn-23{
+  .btn-2{
   margin-left:5.5em;
   }
+
+  .btn-12{
+    margin-right:2em;
+    margin-left: 1.5em;
+    }
+    
+    .btn-23{
+    margin-left:3.5em;
+    }
 .create-btn{
   margin-top: 0.4em;
   margin-bottom: 0.4em;
