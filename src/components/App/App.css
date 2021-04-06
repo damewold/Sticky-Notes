@@ -343,7 +343,7 @@ button{
 }
 
 
-@media screen and (min-width: 900px) and (max-width:1151px){
+@media screen and (min-width: 900px) and (max-width:1351px){
   .App {
     text-align: center;
     font-style: normal;
@@ -449,7 +449,7 @@ z-index: 99;
   }
 }
 
-@media screen and (min-width: 600px) and (max-width:900px){
+@media only screen and (min-width: 600px) and (max-width:900px){
   .App {
     text-align: center;
     font-style: normal;
